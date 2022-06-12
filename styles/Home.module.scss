@@ -1,6 +1,21 @@
 @import 'styles/mixins';
 
+// .bg::before {
+//   background-image:url("/space-station.png");
+//   content: ' ';
+//   display: block;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   opacity: 0.6;
+//   background-repeat: no-repeat;
+//   background-position: 50% 0;
+//   background-size: cover;
+// }
 .main {
+  position:relative;
   text-align:center;
   height:calc(100vh - 80px);
   display:flex;
@@ -13,6 +28,13 @@
     color:var(--text2);
     text-transform: uppercase;
     font-family:'Microgramma-bold';
+    @include tablet() {
+      font-size:5vw;
+    }
+  }
+  .logo {
+    max-width:100%;
+    margin:10px 0px 30px 0px;
   }
   .subTitle {
     font-size:2.4rem;
@@ -20,6 +42,9 @@
     text-transform: capitalize;
     font-family:'Microgramma';
     word-spacing: -10px;
+    @include tablet() {
+      font-size:5vw;
+    }
   }
   .locations {
     display:flex;

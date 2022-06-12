@@ -5,16 +5,14 @@ import Logo from '../public/wy-logo.svg'
 export default function Home() {
   return (
     <div className={styles.container}>
-
+      
       <main className={styles.main}>
         <div>
-          <h1 className={styles.title}>
-            Weyland-Yutani Corp
-          </h1>
-          <Image src={Logo} alt='Weyland Yutani' width={ 600 } height={ 248 } />
-          <h1 className={styles.subTitle}>
-          building better worlds
-          </h1>
+          <h1 className={styles.title}>Weyland-Yutani Corp</h1>
+          <div className={styles.logo}>
+            <Image src={Logo} alt='Weyland Yutani' layout="responsive" />
+          </div>
+          <h1 className={styles.subTitle}>building better worlds</h1>
         </div>
         <ul className={styles.locations}>
           <li>Tokyo</li>
