@@ -1,21 +1,28 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
+import Logo from '../public/wy-logo.svg'
 
 export default function Home() {
   return (
     <div className={styles.container}>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <div>
+          <h1 className={styles.title}>
+            Weyland-Yutani Corp
+          </h1>
+          <Image src={Logo} alt='Weyland Yutani' width={ 600 } height={ 248 } />
+          <h1 className={styles.subTitle}>
           building better worlds
-        </h1>
-        <div className={styles.locations}>
-          <p>Tokyo</p>
-          <p>London</p>
-          <p>San Francisco</p>
-          <p>Sea of Tranquility</p>
-          <p>Thedus</p>
+          </h1>
         </div>
+        <ul className={styles.locations}>
+          <li>Tokyo</li>
+          <li>London</li>
+          <li>San Francisco</li>
+          <li>Sea of Tranquility</li>
+          <li>Thedus</li>
+        </ul>
       </main>
 
       <section id="about" className={styles.section}>

@@ -4,21 +4,36 @@
   text-align:center;
   height:calc(100vh - 80px);
   display:flex;
-  flex-direction: column;
   gap:70px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1 {
-    font-size:5rem;
+  .title {
+    font-size:2.4rem;
+    color:var(--text2);
+    text-transform: uppercase;
+    font-family:'Microgramma-bold';
+  }
+  .subTitle {
+    font-size:2.4rem;
     color:var(--text2);
     text-transform: capitalize;
-
+    font-family:'Microgramma';
+    word-spacing: -10px;
   }
   .locations {
     display:flex;
-    gap:20px;
-    color:var(--text);
+    flex-wrap:wrap;
+    color:var(--text2);
+    opacity: .5;
     text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    li + li::before {
+      content: "•";
+      padding:0px 1rem;
+  }
   }
 }
 

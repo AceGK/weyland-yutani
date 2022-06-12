@@ -53,6 +53,27 @@ table {
 /*                                    Globals                                 */
 /* -------------------------------------------------------------------------- */
 
+
+@font-face {
+  font-family: 'Microgramma-bold';
+  src: url('/fonts/Microgramma-bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Microgramma';
+  src: url('/fonts/Microgramma.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Thedus-Condensed';
+  src: url('/fonts/Thedus-Condensed.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html,
 body {
   background:hsl(0, 0%, 10%);
@@ -96,11 +117,9 @@ nav {
     @include tablet() {
       height:60px;
     }
-    span {
-      text-transform: uppercase;
-    }
     .logo {
       width:250px;
+      margin:auto;
       @include tablet() {
         width: 160px;
         padding:0px;

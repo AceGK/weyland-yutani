@@ -11,7 +11,27 @@ const Layout = ({ children }) => {
                 <title>Weyland Yutani Corp</title>
                 <meta name="description" content="Weyland Yutani Corporation" />
                 <link rel="icon" href="/favicon.ico" />
-                
+                <link 
+                    rel="preload"
+                    href="/fonts/Microgramma-bold.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+                <link 
+                    rel="preload"
+                    href="/fonts/Microgramma.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                />
+                <link 
+                    rel="preload"
+                    href="/fonts/Thedus-Condensed.otf"
+                    as="font"
+                    type="font/otf"
+                    crossOrigin="anonymous"
+                />
             </Head>
             <Nav/>
             { children }
