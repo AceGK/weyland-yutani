@@ -4,6 +4,7 @@ import '../public/icons/style.scss';
 
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <Layout>
       <Component {...pageProps} />

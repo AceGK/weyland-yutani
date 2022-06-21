@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Logo from '../public/wy-logo.svg'
+import MousePosition from '../comps/mousePosition'
 
 export default function Home() {
+
   return (
     <main>
       
@@ -31,6 +33,7 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
+        <MousePosition />
       </section>
 
       <section id="engineering" className={styles.engineering}>
@@ -41,6 +44,7 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
+        <MousePosition />
       </section>
 
       <section id="exploration" className={styles.exploration}>
@@ -51,6 +55,7 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
+        <MousePosition />
       </section>
 
       <section id="terraforming" className={styles.terraforming}>
@@ -61,6 +66,7 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
+        <MousePosition />
       </section>
 
     </main>

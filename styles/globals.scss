@@ -92,6 +92,13 @@ a {
   box-sizing: border-box;
 }
 
+.mouse-position {
+  color:var(--text2);
+  position: relative;
+  text-align: right;
+  width: calc(100% - 70px);
+  top: -12px;
+}
 
 
 /* -------------------------------------------------------------------------- */
