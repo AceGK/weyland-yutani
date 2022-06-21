@@ -1,7 +1,7 @@
 
 import Head from 'next/head';
 import Nav from "./nav";
-
+import Footer from "./footer"
 
 
 const Layout = ({ children }) => {
@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
             </Head>
             <Nav/>
             { children }
-
+            <Footer/>
         </div>
      );
 }

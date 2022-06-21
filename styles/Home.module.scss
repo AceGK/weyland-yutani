@@ -1,23 +1,16 @@
 @import 'styles/mixins';
 
-// .bg::before {
-//   background-image:url("/space-station.png");
-//   content: ' ';
-//   display: block;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   opacity: 0.6;
-//   background-repeat: no-repeat;
-//   background-position: 50% 0;
-//   background-size: cover;
-// }
-.main {
+.hero {
+  background-image: url('/inspiration-photos/7.jpeg'), var(--overlay);
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position:relative;
   text-align:center;
-  height:calc(100vh - 80px);
+  // height:calc(100vh - 80px);
+  height:100vh;
   display:flex;
   gap:70px;
   flex-direction: column;
@@ -27,7 +20,7 @@
     font-size:2.4rem;
     color:var(--text2);
     text-transform: uppercase;
-    font-family:'Microgramma-bold';
+    font-family:var(--ff-title);
     @include tablet() {
       font-size:5vw;
     }
@@ -40,7 +33,7 @@
     font-size:2.4rem;
     color:var(--text2);
     text-transform: capitalize;
-    font-family:'Microgramma';
+    font-family:var(--ff-subtitle);
     word-spacing: -10px;
     @include tablet() {
       font-size:5vw;
@@ -62,15 +55,48 @@
   }
 }
 
-.section {
-  background:black;
-  padding:500px 0;
-  text-align:center;
+:is(.about, .engineering, .exploration, .terraforming) {
+  padding:2em;
+  background-blend-mode: overlay;
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.row {
+  color:var(--text2);
   display:flex;
   justify-content: center;
   align-items: center;
+  gap:5em;
+  min-height:calc(100vh - (2em * 2));
+  border:1px solid rgba(255, 255, 255, .3);
+  padding:3em;
+  @include tablet(){
+    flex-direction: column;
+  }
   h1 {
     font-size:2rem;
     color:var(--text2);
+    margin-bottom: 25px;
   }
+}
+
+.about {
+    background-image: url('/inspiration-photos/3.jpeg'), var(--overlay);
+}
+
+.engineering {
+    background-image: url('/inspiration-photos/2.jpeg'), var(--overlay);
+}
+
+.exploration {
+    background-image: url('/inspiration-photos/8.jpeg'), var(--overlay);
+}
+
+.terraforming {
+    background-image: url('/inspiration-photos/6.jpeg'), var(--overlay);
 }

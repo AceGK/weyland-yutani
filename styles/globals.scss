@@ -98,6 +98,12 @@ a {
 /*                            Primary Navigaton Bar                           */
 /* -------------------------------------------------------------------------- */
 nav {
+  display:none;
+  position:fixed;
+  width:100%;
+  top: 0;
+  z-index: 999;
+  background:rgba(0,0,0,.8);
   svg {
     display:flex;
   }
@@ -196,5 +202,23 @@ nav {
         padding-right:var(--gap);
       }
     }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Footer                                     */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  padding:5em;
+  background:black;
+  p {
+    color:var(--text2)
+  }
+}
+footer .logo {
+  text-align: center;
+  svg {
+    fill:white;
   }
 }

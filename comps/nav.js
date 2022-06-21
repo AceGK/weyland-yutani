@@ -35,13 +35,13 @@ const Navbar = () => {
     return (
         <nav ref={navSize}>
             <div className='nav-bar'>
-                <button>+</button>
+            <i className="icon-bars-solid" title="menu"></i>
                 <div className='logo'>
                     <Link href='/'>
                         <a><Image src={Logo} alt='Weyland Yutani' width={ 320 } height={ 80 } /></a>
                     </Link>
                 </div>
-                <button>+</button>
+                <i className="icon-bars-solid" title="menu"></i>
 
                 {/* <button className='hamburger' onClick={ handleToggle } aria-label="mobile menu">
                         {navbarOpen ? (
