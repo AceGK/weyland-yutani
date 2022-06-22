@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Logo from '../public/wy-logo.svg'
 import MousePosition from '../comps/mousePosition'
+import ScrollPosition from '../comps/scrollPosition'
 
 export default function Home() {
 
@@ -33,7 +34,10 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
-        <MousePosition />
+        <div className="pos-data">
+          <ScrollPosition />
+          <MousePosition />
+        </div>
       </section>
 
       <section id="engineering" className={styles.engineering}>
@@ -44,7 +48,10 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
-        <MousePosition />
+        <div className="pos-data">
+          <ScrollPosition />
+          <MousePosition />
+        </div>
       </section>
 
       <section id="exploration" className={styles.exploration}>
@@ -55,7 +62,10 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
-        <MousePosition />
+        <div className="pos-data">
+          <ScrollPosition />
+          <MousePosition />
+        </div>
       </section>
 
       <section id="terraforming" className={styles.terraforming}>
@@ -66,7 +76,10 @@ export default function Home() {
           </div>
           <div><img src="https://unsplash.it/400" alt="" /></div>
         </div>
-        <MousePosition />
+        <div className="pos-data">
+          <ScrollPosition />
+          <MousePosition />
+        </div>
       </section>
 
     </main>

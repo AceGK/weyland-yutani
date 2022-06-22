@@ -63,6 +63,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &:hover .row {
+    background:
+    linear-gradient(to right, var(--accent1) 1px, transparent 1px) 0 0,
+    linear-gradient(to right, var(--accent1) 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, var(--accent1) 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, var(--accent1) 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, var(--accent1) 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, var(--accent1) 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, var(--accent1) 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, var(--accent1) 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+  }
 }
 
 
@@ -74,21 +88,17 @@
   gap:5em;
   min-height:calc(100vh - (2em * 2));
   padding:3em;
-  
   background:
-    linear-gradient(to right, var(--text2) 1px, transparent 1px) 0 0,
-    linear-gradient(to right, var(--text2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to left, var(--text2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to left, var(--text2) 1px, transparent 1px) 100% 100%,
-    linear-gradient(to bottom, var(--text2) 1px, transparent 1px) 0 0,
-    linear-gradient(to bottom, var(--text2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to top, var(--text2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to top, var(--text2) 1px, transparent 1px) 100% 100%;
-
+    linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 0,
+    linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 100% 100%;
   background-repeat: no-repeat;
   background-size: 50px 50px;
-
-
   @include tablet(){
     flex-direction: column;
   }
@@ -100,17 +110,17 @@
 }
 
 .about {
-    background-image: url('/inspiration-photos/3.jpeg'), var(--overlay);
+    background-image: url('/inspiration-photos/3.jpeg'), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }
 
 .engineering {
-    background-image: url('/inspiration-photos/2.jpeg'), var(--overlay);
+    background-image: url('/inspiration-photos/2.jpeg'), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }
 
 .exploration {
-    background-image: url('/inspiration-photos/8.jpeg'), var(--overlay);
+    background-image: url('/inspiration-photos/8.jpeg'), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }
 
 .terraforming {
-    background-image: url('/inspiration-photos/6.jpeg'), var(--overlay);
+    background-image: url('/inspiration-photos/6.jpeg'), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }

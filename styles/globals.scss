@@ -92,12 +92,15 @@ a {
   box-sizing: border-box;
 }
 
-.mouse-position {
+.pos-data {
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  top: -10px;
+  width:calc(100% - 130px);
+  margin:auto;
   color:var(--text2);
-  position: relative;
-  text-align: right;
-  width: calc(100% - 70px);
-  top: -12px;
+  opacity: .8;
 }
 
 
