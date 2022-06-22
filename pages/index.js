@@ -9,7 +9,7 @@ import DocumentHeight from '../comps/documentHeight'
 export default function Home() {
 
   return (
-    <main className="scanlines">
+    <main>
       
       <section className={styles.hero}>
         <div>
