@@ -16,6 +16,9 @@ import { Mousewheel, Pagination } from "swiper";
 export default function Test() {
 	return (
 		<>
+		<div className="test-data">
+							<MousePosition />
+		</div>
 			<Swiper
 				direction={"vertical"}
 				slidesPerView={1}
@@ -30,6 +33,7 @@ export default function Test() {
 				modules={[Mousewheel, Pagination]}
 				className="mySwiper"
 			>
+				<div className={styles.overlayData}>
 				<SwiperSlide>
 					<section className={styles.hero}>
 						<div>
@@ -136,7 +140,10 @@ export default function Test() {
 						</div>
 					</section>
 				</SwiperSlide>
+
+				</div>
 			</Swiper>
+
 		</>
 	);
 }
