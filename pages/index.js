@@ -4,6 +4,7 @@ import Logo from '../public/wy-logo.svg'
 import MousePosition from '../comps/mousePosition'
 import ScrollPosition from '../comps/scrollPosition'
 import WindowDimensions from '../comps/windowDimensions'
+import DocumentHeight from '../comps/documentHeight'
 
 export default function Home() {
 
@@ -43,7 +44,9 @@ export default function Home() {
           </ul>
         </div>
         <div className="pos-data">
-          <ScrollPosition />
+          <div>
+            <ScrollPosition /> : <DocumentHeight />
+          </div>
           <MousePosition />
         </div>
       </section>
@@ -57,7 +60,9 @@ export default function Home() {
           {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
         </div>
         <div className="pos-data">
-          <ScrollPosition />
+          <div>
+            <ScrollPosition /> : <DocumentHeight />
+          </div>
           <MousePosition />
         </div>
       </section>
@@ -71,7 +76,9 @@ export default function Home() {
           {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
         </div>
         <div className="pos-data">
-          <ScrollPosition />
+          <div>
+            <ScrollPosition /> : <DocumentHeight />
+          </div>
           <MousePosition />
         </div>
       </section>
@@ -85,7 +92,9 @@ export default function Home() {
           {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
         </div>
         <div className="pos-data">
-          <ScrollPosition />
+          <div>
+            <ScrollPosition /> : <DocumentHeight />
+          </div>
           <MousePosition />
         </div>
       </section>
