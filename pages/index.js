@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.scss'
 import Logo from '../public/wy-logo.svg'
 import MousePosition from '../comps/mousePosition'
 import ScrollPosition from '../comps/scrollPosition'
+import WindowDimensions from '../comps/windowDimensions'
 
 export default function Home() {
 
@@ -27,12 +28,19 @@ export default function Home() {
       </section>
 
       <section id="about" className={styles.about}>
+        <div className="pos-data">
+          <WindowDimensions />
+        </div>
         <div className={styles.row}>
           <div>
             <h1>about</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
           </div>
-          <div><img src="https://unsplash.it/400" alt="" /></div>
+          <ul className={styles.buttons}>
+            <li><a href="#engineering">Engineering</a></li>
+            <li><a href="#exploration">Exploration</a></li>
+            <li><a href="#terraforming">Terraforming</a></li>
+          </ul>
         </div>
         <div className="pos-data">
           <ScrollPosition />
@@ -46,7 +54,7 @@ export default function Home() {
             <h1>engineering</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
           </div>
-          <div><img src="https://unsplash.it/400" alt="" /></div>
+          {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
         </div>
         <div className="pos-data">
           <ScrollPosition />
@@ -60,7 +68,7 @@ export default function Home() {
             <h1>exploration</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
           </div>
-          <div><img src="https://unsplash.it/400" alt="" /></div>
+          {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
         </div>
         <div className="pos-data">
           <ScrollPosition />
@@ -74,7 +82,7 @@ export default function Home() {
             <h1>terraforming</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
           </div>
-          <div><img src="https://unsplash.it/400" alt="" /></div>
+          {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
         </div>
         <div className="pos-data">
           <ScrollPosition />
