@@ -6,7 +6,7 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => {
     return ( 
-        <div className="content">
+        <div className="content scanlines">
             <Head>
                 <title>Weyland Yutani Corp</title>
                 <meta name="description" content="Weyland Yutani Corporation" />
