@@ -5,7 +5,9 @@ const DocumentHeight = () =>  {
   const height = getDocumentHeight();
 
   return (
-      <>{height}</>
+      <>
+      {height}
+      </>
   )
 }
 export default DocumentHeight

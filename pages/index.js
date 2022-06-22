@@ -9,7 +9,7 @@ import DocumentHeight from '../comps/documentHeight'
 export default function Home() {
 
   return (
-    <main>
+    <main className="scanlines">
       
       <section className={styles.hero}>
         <div>
@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       <section id="about" className={styles.about}>
-        <div className="pos-data">
+        <div className="doc-data">
           <WindowDimensions />
         </div>
         <div className={styles.row}>
@@ -52,6 +52,9 @@ export default function Home() {
       </section>
 
       <section id="engineering" className={styles.engineering}>
+        <div className="doc-data">
+          <WindowDimensions />
+        </div>
         <div className={styles.row}>
           <div>
             <h1>engineering</h1>
@@ -68,6 +71,9 @@ export default function Home() {
       </section>
 
       <section id="exploration" className={styles.exploration}>
+        <div className="doc-data">
+          <WindowDimensions />
+        </div>
         <div className={styles.row}>
           <div>
             <h1>exploration</h1>
@@ -84,6 +90,9 @@ export default function Home() {
       </section>
 
       <section id="terraforming" className={styles.terraforming}>
+        <div className="doc-data">
+          <WindowDimensions />
+        </div>
         <div className={styles.row}>
           <div>
             <h1>terraforming</h1>

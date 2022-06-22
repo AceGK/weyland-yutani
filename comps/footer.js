@@ -6,7 +6,7 @@ const Footer = () => {
       <footer>
         <div className="logo">
         <Image src={Wings} alt='Weyland Yutani' width={ 320 } height={ 80 } />
-        <p>Weyland-Yutani © 2122</p>
+        <p>Weyland-Yutani Corporation © 2122</p>
         </div>
       </footer>
      );
