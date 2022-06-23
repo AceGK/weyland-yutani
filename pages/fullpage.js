@@ -23,9 +23,9 @@ export default function Test() {
 				direction={"vertical"}
 				slidesPerView={1}
 				mousewheel={{
-					// forceToAxis: true,
-					sensitivity: 2,
-					releaseOnEdges: true,
+					forceToAxis: true,
+					sensitivity: 1,
+					// releaseOnEdges: true,
 				}}
 				pagination={{
 					clickable: true,
