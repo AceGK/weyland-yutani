@@ -83,19 +83,6 @@
   }
 }
 
-.overlayData {
-  background: linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 0,
-    linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 100%,
-    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 0 0,
-    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 100% 100%;
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-}
-
 .row {
   color: var(--text2);
   display: flex;
@@ -171,4 +158,29 @@
 .terraforming {
   background-image: url("/inspiration-photos/6.jpeg"),
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+
+
+.fullOverlay {
+	--overlayMargin: 20px;
+	pointer-events: none;
+	opacity: .5;
+	width:      calc(100% - calc(var(--overlayMargin) * 2));
+  height:     calc(100% - calc(var(--overlayMargin) * 2)); 
+  z-index:    2;
+  top:        var(--overlayMargin); 
+  left:       var(--overlayMargin);  
+  position:   absolute; 
+	// background:red;
+	background: linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 0,
+    linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
 }

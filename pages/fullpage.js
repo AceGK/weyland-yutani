@@ -16,6 +16,7 @@ import { Mousewheel, Pagination } from "swiper";
 export default function Test() {
 	return (
 		<>
+		<div className={styles.fullOverlay}></div>
 		<div className="test-data">
 							<MousePosition />
 		</div>
