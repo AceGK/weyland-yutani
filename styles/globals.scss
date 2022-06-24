@@ -135,12 +135,38 @@ a {
   color:var(--text2);
 }
 
-.test-data {
+.data-top-left {
   color:var(--text2);
-  opacity: 0.8;
+  font-size:.6rem;
   position:absolute;
-  top:10px;
-  left:10px;
+  top:-4px;
+  left:70px;
+  z-index: 2;
+}
+
+.data-top-right {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  top:-4px;
+  right:70px;
+  z-index: 2;
+}
+.data-bottom-left {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  bottom:-4px;
+  left:70px;
+  z-index: 2;
+}
+
+.data-bottom-right {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  bottom:-4px;
+  right:70px;
   z-index: 2;
 }
 

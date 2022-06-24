@@ -16,9 +16,19 @@ import { Mousewheel, Pagination } from "swiper";
 export default function Test() {
 	return (
 		<>
-		<div className={styles.fullOverlay}></div>
-		<div className="test-data">
-							<MousePosition />
+		<div className={styles.fullOverlay}>
+			<div className="data-top-left">
+								<MousePosition />
+			</div>
+			<div className="data-top-right">
+								<WindowDimensions />
+			</div>
+			<div className="data-bottom-left">
+								<WindowDimensions />
+			</div>
+			<div className="data-bottom-right">
+								<WindowDimensions />
+			</div>
 		</div>
 			<Swiper
 				direction={"vertical"}
@@ -56,12 +66,9 @@ export default function Test() {
 
 				<SwiperSlide>
 					<section id="about" className={styles.about}>
-						<div className="doc-data">
-							<WindowDimensions />
-						</div>
 						<div className={styles.row}>
 							<div>
-								<h1>about</h1>
+								<h1>About</h1>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
 							</div>
 							<ul className={styles.buttons}>
@@ -70,74 +77,52 @@ export default function Test() {
 								<li><a href="#terraforming">Terraforming</a></li>
 							</ul>
 						</div>
-						<div className="pos-data">
-							<div>
-								<ScrollPosition /> : <DocumentHeight />
-							</div>
-							<MousePosition />
-						</div>
 					</section>
 				</SwiperSlide>
 
 				<SwiperSlide>
 					<section id="engineering" className={styles.engineering}>
-						<div className="doc-data">
-							<WindowDimensions />
-						</div>
 						<div className={styles.row}>
 							<div>
-								<h1>engineering</h1>
+								<h1>Engineering</h1>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
 							</div>
 							{/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
-						</div>
-						<div className="pos-data">
-							<div>
-								<ScrollPosition /> : <DocumentHeight />
-							</div>
-							<MousePosition />
 						</div>
 					</section>
 				</SwiperSlide>
 
 				<SwiperSlide>
 					<section id="exploration" className={styles.exploration}>
-						<div className="doc-data">
-							<WindowDimensions />
-						</div>
 						<div className={styles.row}>
 							<div>
-								<h1>exploration</h1>
+								<h1>Exploration</h1>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
 							</div>
 							{/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
-						</div>
-						<div className="pos-data">
-							<div>
-								<ScrollPosition /> : <DocumentHeight />
-							</div>
-							<MousePosition />
 						</div>
 					</section>
 				</SwiperSlide>
 
 				<SwiperSlide>
 					<section id="terraforming" className={styles.terraforming}>
-						<div className="doc-data">
-							<WindowDimensions />
-						</div>
 						<div className={styles.row}>
 							<div>
-								<h1>terraforming</h1>
+								<h1>Terraforming</h1>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
 							</div>
 							{/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
 						</div>
-						<div className="pos-data">
+					</section>
+				</SwiperSlide>
+
+				<SwiperSlide>
+					<section>
+						<div className={styles.row}>
 							<div>
-								<ScrollPosition /> : <DocumentHeight />
+								<h1>Footer</h1>
 							</div>
-							<MousePosition />
+							{/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
 						</div>
 					</section>
 				</SwiperSlide>

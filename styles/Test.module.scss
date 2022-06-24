@@ -139,7 +139,7 @@
 
 
 .fullOverlay {
-	--overlayMargin: 20px;
+	--overlayMargin: 2em;
 	pointer-events: none;
 	opacity: .5;
 	width:      calc(100% - calc(var(--overlayMargin) * 2));
@@ -148,15 +148,14 @@
   top:        var(--overlayMargin); 
   left:       var(--overlayMargin);  
   position:   absolute; 
-	// background:red;
-	background: linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 0,
-    linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 100%,
-    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 0 0,
-    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 100% 100%;
+	background: linear-gradient(to right, var(--accent2) 2px, transparent 2px) 0 0,
+    linear-gradient(to right, var(--accent2) 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, var(--accent2) 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, var(--accent2) 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, var(--accent2) 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, var(--accent2) 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, var(--accent2) 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, var(--accent2) 2px, transparent 2px) 100% 100%;
   background-repeat: no-repeat;
   background-size: 50px 50px;
 }
