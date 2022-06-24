@@ -1,0 +1,170 @@
+@import "styles/mixins";
+
+.hero {
+  background-image: url("/inspiration-photos/7.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  gap: 70px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-size: 2.4rem;
+    color: var(--text2);
+    text-transform: uppercase;
+    font-family: var(--ff-title);
+    @include tablet() {
+      font-size: 5vw;
+    }
+  }
+  .logo {
+    max-width: 100%;
+    margin: 10px 0px 30px 0px;
+  }
+  .subTitle {
+    font-size: 2rem;
+    color: var(--text2);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: var(--ff-subtitle);
+    word-spacing: -0.1em;
+    @include tablet() {
+      font-size: 5vw;
+    }
+  }
+  .locations {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text2);
+    opacity: 0.5;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    li + li::before {
+      content: "•";
+      padding: 0px 1rem;
+    }
+  }
+}
+
+:is(.about, .engineering, .exploration, .terraforming) {
+  padding: 2em;
+  background-blend-mode: overlay;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  color: var(--text2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  min-height: calc(100vh - (2em * 2));
+  
+  @include tablet() {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2rem;
+    color: var(--text2);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--ff-title);
+  }
+  div {
+    max-width: 900px;
+  }
+}
+
+.about {
+  background-image: url("/inspiration-photos/3.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  text-align: center;
+  .row {
+    flex-direction: column !important;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    a {
+      display: block;
+      border: 1px solid white;
+      padding: 1em 2em;
+      text-transform: uppercase;
+      &:hover {
+        background: var(--accent1);
+        border-color: var(--accent1);
+        color: var(--text);
+      }
+    }
+    @include tablet() {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.engineering {
+  background-image: url("/inspiration-photos/2.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.exploration {
+  background-image: url("/inspiration-photos/8.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.terraforming {
+  background-image: url("/inspiration-photos/6.jpeg"),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+
+
+.fullOverlay {
+	--overlayMargin: 2em;
+	pointer-events: none;
+	opacity: .5;
+	width:      calc(100% - calc(var(--overlayMargin) * 2));
+  height:     calc(100% - calc(var(--overlayMargin) * 2)); 
+  z-index:    2;
+  top:        var(--overlayMargin); 
+  left:       var(--overlayMargin);  
+  position:   fixed; 
+	--corner-weight:2px;
+	background: 
+		// left (top, bottom)
+		linear-gradient(to right, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 var(--corner-weight),
+    linear-gradient(to right, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 calc(100% - var(--corner-weight)),
+		
+		// right (top, bottom)
+    linear-gradient(to left, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% var(--corner-weight),
+    linear-gradient(to left, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% calc(100% - var(--corner-weight)),
+    
+		//top (left, right)
+		linear-gradient(to bottom, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 0,
+    linear-gradient(to bottom, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% 0,
+
+		//bottom (left, right)
+    linear-gradient(to top, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 100%,
+    linear-gradient(to top, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% 100%;
+		
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
