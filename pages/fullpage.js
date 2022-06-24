@@ -18,16 +18,16 @@ export default function Test() {
 		<>
 		<div className={styles.fullOverlay}>
 			<div className="data-top-left">
-								<MousePosition />
+								<WindowDimensions />
 			</div>
 			<div className="data-top-right">
-								<WindowDimensions />
+								<MousePosition />
 			</div>
 			<div className="data-bottom-left">
-								<WindowDimensions />
+								<MousePosition />
 			</div>
 			<div className="data-bottom-right">
-								<WindowDimensions />
+							w-y sys v1.0.2
 			</div>
 		</div>
 			<Swiper

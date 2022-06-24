@@ -140,7 +140,7 @@ a {
   font-size:.6rem;
   position:absolute;
   top:-4px;
-  left:70px;
+  left:60px;
   z-index: 2;
 }
 
@@ -149,7 +149,7 @@ a {
   font-size:.6rem;
   position:absolute;
   top:-4px;
-  right:70px;
+  right:60px;
   z-index: 2;
 }
 .data-bottom-left {
@@ -157,7 +157,7 @@ a {
   font-size:.6rem;
   position:absolute;
   bottom:-4px;
-  left:70px;
+  left:60px;
   z-index: 2;
 }
 
@@ -166,7 +166,7 @@ a {
   font-size:.6rem;
   position:absolute;
   bottom:-4px;
-  right:70px;
+  right:60px;
   z-index: 2;
 }
 
@@ -344,11 +344,11 @@ footer {
     $scan-width: 2px;
     // emulates a damage-your-eyes bad pre-2000 CRT screen ♥ (true, false)
     $scan-crt: true;
-    $scan-fps: 120;
+    $scan-fps: 60;
 
     $scan-color: rgba(#000, .1);
 
-    $scan-z-index: 9999; 
+    $scan-z-index: 9999999; 
 
 /* MOVING SCANLINE SETTINGS */
 
@@ -356,14 +356,14 @@ footer {
     $scan-moving-line: true;
 
     // opacity of the moving scanline
-    $scan-opacity: .75;
+    $scan-opacity: 1;
 
 /* MIXINS */
 
     // apply CRT animation: @include scan-crt($scan-crt);
     @mixin scan-crt($scan-crt) {
         @if $scan-crt == true {
-            animation: scanlines 6s steps($scan-fps) infinite;
+            animation: scanlines 0s steps($scan-fps) infinite;
         }
         @else { animation: none; }
     }
@@ -371,7 +371,7 @@ footer {
     // apply CRT animation: @include scan-crt($scan-crt);
     @mixin scan-moving($scan-moving-line) {
         @if $scan-moving-line == true {
-            animation: scanline 6s linear infinite;
+            animation: scanline 4s linear infinite;
         }
         @else { animation: none; }
     }
@@ -393,11 +393,12 @@ footer {
         // unique scanline travelling on the screen
         &:before {
             width: 100%;
-            height: $scan-width * 1;
+            height: $scan-width * 2;
             z-index: $scan-z-index + 1;
             background: $scan-color;
             opacity: $scan-opacity;
             @include scan-moving($scan-moving-line);
+            position: absolute; bottom: 100%;
         }
 
         // the scanlines, so!
@@ -410,7 +411,7 @@ footer {
             background: linear-gradient(
                 to bottom,
                 transparent 50%,
-                $scan-color 80%
+                $scan-color 0%
             );
             background-size: 100% $scan-width*2;
             @include scan-crt($scan-crt);
@@ -420,8 +421,9 @@ footer {
 /* ANIMATE UNIQUE SCANLINE */
     @keyframes scanline {
         0% {
-            transform: translate3d(0,200000%,0);
+            // transform: translate3d(0,200000%,0);
             bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
+            
         }
     }
 

@@ -6,7 +6,7 @@ export default function mousePosition() {
 
   return (
       <>
-      {position.x} : {position.y}
+      {position.x}x : {position.y}y
       </>
   )
 }

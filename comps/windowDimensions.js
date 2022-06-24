@@ -6,7 +6,7 @@ const WindowDimensions = () => {
 
   return (
     <div>
-     {width} : {height}
+     {width}w : {height}h
     </div>
   );
 }
