@@ -67,20 +67,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  &:hover .row {
-    background: linear-gradient(to right, var(--accent1) 1px, transparent 1px) 0
-        0,
-      linear-gradient(to right, var(--accent1) 1px, transparent 1px) 0 100%,
-      linear-gradient(to left, var(--accent1) 1px, transparent 1px) 100% 0,
-      linear-gradient(to left, var(--accent1) 1px, transparent 1px) 100% 100%,
-      linear-gradient(to bottom, var(--accent1) 1px, transparent 1px) 0 0,
-      linear-gradient(to bottom, var(--accent1) 1px, transparent 1px) 100% 0,
-      linear-gradient(to top, var(--accent1) 1px, transparent 1px) 0 100%,
-      linear-gradient(to top, var(--accent1) 1px, transparent 1px) 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-  }
 }
 
 .row {
@@ -90,17 +76,7 @@
   align-items: center;
   gap: 5em;
   min-height: calc(100vh - (2em * 2));
-  padding: 3em;
-  background: linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 0,
-    linear-gradient(to right, var(--accent2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to left, var(--accent2) 1px, transparent 1px) 100% 100%,
-    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 0 0,
-    linear-gradient(to bottom, var(--accent2) 1px, transparent 1px) 100% 0,
-    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 0 100%,
-    linear-gradient(to top, var(--accent2) 1px, transparent 1px) 100% 100%;
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
+  
   @include tablet() {
     flex-direction: column;
   }
