@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Image from 'next/image'
-import styles from '../styles/Test2.module.scss'
+import styles from '../styles/Home.module.scss'
 import Logo from '../public/wy-logo.svg'
 import MousePosition from '../comps/mousePosition'
 import ScrollPosition from '../comps/scrollPosition'
@@ -12,16 +12,16 @@ export default function Test() {
 	return (
 		<>
 		<div className={styles.fullOverlay}>
-			<div className="data-top-left">
+			<div className={styles.dataTopLeft}>
 								<WindowDimensions />
 			</div>
-			<div className="data-top-right">
+			<div className={styles.dataTopRight}>
 								<MousePosition />
 			</div>
-			<div className="data-bottom-left">
+			<div className={styles.dataBottomLeft}>
 								<ScrollPosition />
 			</div>
-			<div className="data-bottom-right">
+			<div className={styles.dataBottomRight}>
 							w-y sys v1.0.2
 			</div>
 		</div>
