@@ -1,10 +1,12 @@
-import { useWindowScrollPositions } from "../hooks/useScrollPosition";
+import { getMaxScroll, useWindowScrollPositions } from "../hooks/useScrollPosition";
 
 export default function scrollPosition() {
 
 	const { scrollX, scrollY } = useWindowScrollPositions()
+	
+	const { scrollMaxY } = getMaxScroll()
 
 	return (
-		<>{scrollY}</>
+		<>{scrollY} : {scrollMaxY}</>
 	)
 }

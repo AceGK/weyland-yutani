@@ -19,7 +19,7 @@ export default function Test() {
 								<MousePosition />
 			</div>
 			<div className="data-bottom-left">
-								<ScrollPosition /> : <DocumentHeight />
+								<ScrollPosition />
 			</div>
 			<div className="data-bottom-right">
 							w-y sys v1.0.2
