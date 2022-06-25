@@ -107,34 +107,6 @@ a {
   box-sizing: border-box;
 }
 
-.pos-data {
-  font-size:.8rem;
-  display:flex;
-  justify-content: space-between;
-  position:relative;
-  top: -8px;
-  width:calc(100% - 130px);
-  margin:auto;
-  color:var(--text2);
-  opacity: .8;
-}
-
-.doc-data {
-  font-size:.8rem;
-  display:flex;
-  justify-content: space-between;
-  position:relative;
-  top: 8px;
-  width:calc(100% - 130px);
-  margin:auto;
-  color:var(--text2);
-  opacity: .8;
-}
-
-.window-dimesnions {
-  color:var(--text2);
-}
-
 .data-top-left {
   color:var(--text2);
   font-size:.6rem;
@@ -356,14 +328,14 @@ footer {
     $scan-moving-line: true;
 
     // opacity of the moving scanline
-    $scan-opacity: 1;
+    $scan-opacity: .81;
 
 /* MIXINS */
 
     // apply CRT animation: @include scan-crt($scan-crt);
     @mixin scan-crt($scan-crt) {
         @if $scan-crt == true {
-            animation: scanlines 0s steps($scan-fps) infinite;
+            animation: scanlines 6s steps($scan-fps) infinite;
         }
         @else { animation: none; }
     }
@@ -398,7 +370,8 @@ footer {
             background: $scan-color;
             opacity: $scan-opacity;
             @include scan-moving($scan-moving-line);
-            position: absolute; bottom: 100%;
+            position: fixed; 
+            bottom: 100%;
         }
 
         // the scanlines, so!

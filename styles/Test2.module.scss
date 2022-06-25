@@ -140,7 +140,7 @@
 .fullOverlay {
 	--overlayMargin: 2em;
 	pointer-events: none;
-	opacity: .5;
+	opacity: .8;
 	width:      calc(100% - calc(var(--overlayMargin) * 2));
   height:     calc(100% - calc(var(--overlayMargin) * 2)); 
   z-index:    2;
@@ -166,5 +166,41 @@
     linear-gradient(to top, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% 100%;
 		
   background-repeat: no-repeat;
-  background-size: 40px 40px;
+  background-size: 3vw 3vw;
+}
+
+
+.dataTopLeft {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  top:-4px;
+  left:60px;
+  z-index: 2;
+}
+
+.dataTopRight {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  top:-4px;
+  right:60px;
+  z-index: 2;
+}
+.dataBottomLeft {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  bottom:-4px;
+  left:60px;
+  z-index: 2;
+}
+
+.dataBottomRight {
+  color:var(--text2);
+  font-size:.6rem;
+  position:absolute;
+  bottom:-4px;
+  right:60px;
+  z-index: 2;
 }
