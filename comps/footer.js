@@ -5,7 +5,7 @@ const Footer = () => {
     return ( 
       <footer>
         <div className="logo">
-        <Image src={Wings} alt='Weyland Yutani' width={ 320 } height={ 80 } />
+          <Image src={Wings} alt='Weyland Yutani' width={ 320 } height={ 80 } layout="responsive"/>
         <p>Weyland-Yutani Corporation © 2122</p>
         </div>
       </footer>

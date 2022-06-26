@@ -7,31 +7,8 @@ import ScrollPosition from '../comps/scrollPosition'
 import WindowDimensions from '../comps/windowDimensions'
 
 
-// export const useScrollHandler = () => {
-//   const [scroll, setScroll] = useState(0);
-
-//   useEffect(() => {
-//     const onScroll = () => {
-//       setScroll(1 + window.scrollTop > 20);
-//     };
-
-//     document.addEventListener("scroll", onScroll);
-//     return () => {
-//       document.removeEventListener("scroll", onScroll);
-//     };
-//   }, [scroll, setScroll]);
-
-//   return scroll;
-// };
-
-
-
-
-
-
 export default function Home() {
 
-  // const scroll = useScrollHandler();
 
   return (
     <>
@@ -54,12 +31,19 @@ export default function Home() {
       <div className={styles.overlayData}>
 
         <section className={styles.hero}>
+          {/* <Image 
+            className={styles.bgImage}
+            src=''
+            alt=''
+            layout='fill'
+            objectFit='cover'
+            objectPosition='center'
+          /> */}
           <div>
             <h1 className={styles.title} 
-            // style={{ opacity: scroll ? "50%" : "1" }}
             >Weyland-Yutani Corp</h1>
             <div className={styles.logo}>
-              <Image src={Logo} alt='Weyland Yutani' layout="responsive" priority/>
+              <Image src={Logo} alt='Weyland Yutani' layout='responsive' priority/>
             </div>
             <h1 className={styles.subTitle}>building better worlds</h1>
           </div>
@@ -72,21 +56,21 @@ export default function Home() {
           </ul>
         </section>
 
-        <section id="about" className={styles.about}>
+        <section id='about' className={styles.about}>
           <div className={styles.row}>
             <div>
               <h1>About</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
             </div>
             <ul className={styles.buttons}>
-              <li><a href="#engineering">Engineering</a></li>
-              <li><a href="#exploration">Exploration</a></li>
-              <li><a href="#terraforming">Terraforming</a></li>
+              <li><a href='#engineering'>Engineering</a></li>
+              <li><a href='#exploration'>Exploration</a></li>
+              <li><a href='#terraforming'>Terraforming</a></li>
             </ul>
           </div>
         </section>
 
-        <section id="engineering" className={styles.engineering}>
+        <section id='engineering' className={styles.engineering}>
           <div className={styles.row}>
             <div>
               <h1>Engineering</h1>
@@ -96,7 +80,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="exploration" className={styles.exploration}>
+        <section id='exploration' className={styles.exploration}>
           <div className={styles.row}>
             <div>
               <h1>Exploration</h1>
@@ -106,7 +90,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="terraforming" className={styles.terraforming}>
+        <section id='terraforming' className={styles.terraforming}>
           <div className={styles.row}>
             <div>
               <h1>Terraforming</h1>
