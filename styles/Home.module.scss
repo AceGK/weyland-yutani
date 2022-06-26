@@ -171,7 +171,11 @@
     linear-gradient(to top, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% 100%;
 		
   background-repeat: no-repeat;
-  background-size: 3vw 3vw;
+  background-size: 30px 30px;
+  @include tablet() {
+    background-size:3vw 3vw;
+    
+  }
 }
 
 .dataTopLeft {
@@ -179,8 +183,11 @@
   font-size:.6rem;
   position:absolute;
   top:-4px;
-  left:calc(3vw + 15px);
+  left:45px;
   z-index: 2;
+  @include tablet(){
+    left:var(--data-position);
+  }
 }
 
 .dataTopRight {
@@ -188,16 +195,22 @@
   font-size:.6rem;
   position:absolute;
   top:-4px;
-  right:calc(3vw + 15px);
+  right:45px;
   z-index: 2;
+  @include tablet(){
+    right:var(--data-position);
+  }
 }
 .dataBottomLeft {
   color:var(--text2);
   font-size:.6rem;
   position:absolute;
   bottom:-4px;
-  left:calc(3vw + 15px);
+  left:45px;
   z-index: 2;
+  @include tablet(){
+    left:var(--data-position);
+  }
 }
 
 .dataBottomRight {
@@ -205,6 +218,9 @@
   font-size:.6rem;
   position:absolute;
   bottom:-4px;
-  right:calc(3vw + 15px);
+  right:45px;
   z-index: 2;
+  @include tablet(){
+    right:var(--data-position);
+  }
 }
