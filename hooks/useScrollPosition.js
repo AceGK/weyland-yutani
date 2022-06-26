@@ -7,7 +7,7 @@ export const useWindowScrollPositions = () => {
 
     useEffect(() => {
         function updatePosition() {
-            setPosition({ scrollX: window.scrollX, scrollY: window.scrollY })
+            setPosition({ scrollX: window.scrollX, scrollY: Math.round(window.scrollY) })
         }
 
         window.addEventListener('scroll', updatePosition)

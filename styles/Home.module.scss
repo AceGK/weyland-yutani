@@ -91,6 +91,7 @@
   }
   div {
     max-width: 900px;
+    z-index: 3;
   }
 }
 
@@ -137,6 +138,9 @@
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 
+#engineering {
+  scroll-behavior: smooth;
+}
 
 .fullOverlay {
 	--overlayMargin: clamp(1em, 3vw, 2em);

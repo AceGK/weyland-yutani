@@ -27,6 +27,9 @@ import Footer from '../comps/footer'
 
 
 
+
+
+
 export default function Home() {
 
   // const scroll = useScrollHandler();

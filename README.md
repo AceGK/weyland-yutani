@@ -3,9 +3,7 @@ semiotic-standard from Aliens https://github.com/louh/semiotic-standard
 
 
 todo: 
-
-- remove decimals/round window scroll position
-- smooth scroll/anchor links
+- mousewheel scroll to anchors
 - hamburger menu 
 - design sections better
 - add better copy 
@@ -13,3 +11,4 @@ todo:
 - time/date for bottom right? perhaps false year
 - back to top button 
 - chamfered edge buttons 
+- fade text on edge/scroll
