@@ -21,7 +21,7 @@
     margin:0px 10px;
   }
   .title {
-    font-size: clamp(.9rem, 4vw, 2.4rem);
+    font-size: clamp(1rem, 4vw, 2.4rem);
     color: var(--text2);
     text-transform: uppercase;
     font-family: var(--ff-title);
@@ -31,7 +31,7 @@
     margin: 2% 0px 4% 0px;
   }
   .subTitle {
-    font-size: clamp(.7rem, 2.7vw, 1.8rem);
+    font-size: clamp(.8rem, 2.7vw, 1.8rem);
     color: var(--text2);
     text-transform: uppercase;
     font-weight: 800;
@@ -42,7 +42,7 @@
     display: flex;
     flex-wrap: wrap;
     color: var(--text2);
-    font-size: clamp(.6rem, 1.9vw, 1.2rem);
+    font-size: clamp(.8rem, 1.9vw, 1.2rem);
     opacity: 0.4;
     text-transform: uppercase;
     justify-content: center;
