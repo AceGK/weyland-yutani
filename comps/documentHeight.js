@@ -1,13 +1,13 @@
-import getDocumentHeight from "../hooks/getDocumentHeight";
+// import getDocumentHeight from "../hooks/getDocumentHeight";
 
-const DocumentHeight = () =>  {
+// const DocumentHeight = () =>  {
 
-  const height = getDocumentHeight();
+//   const height = getDocumentHeight();
 
-  return (
-      <>
-      {height}
-      </>
-  )
-}
-export default DocumentHeight
+//   return (
+//       <>
+//       {height}
+//       </>
+//   )
+// }
+// export default DocumentHeight

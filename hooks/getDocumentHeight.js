@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-const getDocumentHeight = () => {
-  const [height, setHeight] = useState(null);
+// const getDocumentHeight = () => {
+//   const [height, setHeight] = useState(null);
 
-  useEffect(() => {
-    setHeight(document.body.offsetHeight);
-  }, []);
+//   useEffect(() => {
+//     setHeight(document.body.offsetHeight);
+//   }, []);
 
-  return height;
-}
-export default getDocumentHeight
+//   return height;
+// }
+// export default getDocumentHeight
