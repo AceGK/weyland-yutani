@@ -13,50 +13,47 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 25px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  > div {
+    margin:0px 10px;
+  }
   .title {
-    font-size: clamp(1vw, 4.8vw, 2.3rem);
-    display:block;
-    word-wrap: unset;
+    font-size: clamp(.9rem, 4vw, 2.4rem);
     color: var(--text2);
     text-transform: uppercase;
     font-family: var(--ff-title);
   }
-  div {
-    margin:0 10%;
-    max-width:680px;
-  }
   .logo {
-    max-width: 100%;
-    margin: 10px 0px 30px 0px;
+    width:100%;
+    margin: 2% 0px 4% 0px;
   }
   .subTitle {
-    font-size: 2rem;
+    font-size: clamp(.7rem, 2.7vw, 1.8rem);
     color: var(--text2);
     text-transform: uppercase;
     font-weight: 800;
     font-family: var(--ff-subtitle);
     word-spacing: -0.1em;
-    @include tablet() {
-      font-size: 5vw;
-    }
   }
   .locations {
     display: flex;
     flex-wrap: wrap;
     color: var(--text2);
-    font-size: clamp(1vw, 2vw, 1rem);
-    opacity: 0.5;
+    font-size: clamp(.6rem, 1.9vw, 1.2rem);
+    opacity: 0.4;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 5px;
+    max-width: 80%;
     li + li::before {
-      content: "•";
-      padding: 0px 2vw;
+      content: "▪";
+      bottom: 2px;
+      padding: 0px 1ch;
+      position: relative;
     }
   }
 }
