@@ -5,7 +5,6 @@ import Logo from '../public/wy-logo.svg'
 import MousePosition from '../comps/mousePosition'
 import ScrollPosition from '../comps/scrollPosition'
 import WindowDimensions from '../comps/windowDimensions'
-import Footer from '../comps/footer'
 
 
 // export const useScrollHandler = () => {
@@ -60,7 +59,7 @@ export default function Home() {
             // style={{ opacity: scroll ? "50%" : "1" }}
             >Weyland-Yutani Corp</h1>
             <div className={styles.logo}>
-              <Image src={Logo} alt='Weyland Yutani' layout="responsive" />
+              <Image src={Logo} alt='Weyland Yutani' layout="responsive" priority/>
             </div>
             <h1 className={styles.subTitle}>building better worlds</h1>
           </div>
@@ -118,7 +117,6 @@ export default function Home() {
         </section>
 
       </div>
-      <Footer />
 
     </>
   );

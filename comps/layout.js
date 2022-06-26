@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
     return ( 
         <div className="content scanlines">
             <Head>
-                <html lang="en" />
                 <title>Weyland Yutani Corp</title>
                 <meta name="description" content="Weyland Yutani Corporation" />
                 <link rel="icon" href="/favicon.ico" />
