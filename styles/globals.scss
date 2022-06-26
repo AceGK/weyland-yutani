@@ -96,7 +96,7 @@ body {
 
 p {
   line-height:1.4rem;
-  font-size: clamp(.8rem, 2vw, 1.2rem);
+  font-size: clamp(.8rem, 1.8vw, 1rem);
 }
 
 a {
@@ -106,6 +106,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.vignette {
+  box-shadow: inset 0 0 5em 1em #000;
+  z-index: 2;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
 }
 
 // only used on /slider
@@ -308,7 +317,10 @@ footer {
 
 
 
-// scanlines
+/* -------------------------------------------------------------------------- */
+/*                               Scan Lines                                   */
+/* -------------------------------------------------------------------------- */
+
 
 /* REGULAR SCANLINES SETTINGS */
 
@@ -328,7 +340,7 @@ footer {
     $scan-moving-line: true;
 
     // opacity of the moving scanline
-    $scan-opacity: .81;
+    $scan-opacity: .9;
 
 /* MIXINS */
 
@@ -409,3 +421,9 @@ footer {
 
 
 
+bg-white {
+  background:white;
+}
+bg-black {
+  background:black;
+}

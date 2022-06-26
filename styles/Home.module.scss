@@ -13,18 +13,21 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  gap: 70px;
+  gap: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   .title {
-    font-size: 2.4rem;
+    font-size: clamp(1vw, 4.8vw, 2.3rem);
+    display:block;
+    word-wrap: unset;
     color: var(--text2);
     text-transform: uppercase;
     font-family: var(--ff-title);
-    @include tablet() {
-      font-size: 5vw;
-    }
+  }
+  div {
+    margin:0 10%;
+    max-width:680px;
   }
   .logo {
     max-width: 100%;
@@ -45,6 +48,7 @@
     display: flex;
     flex-wrap: wrap;
     color: var(--text2);
+    font-size: clamp(1vw, 2vw, 1rem);
     opacity: 0.5;
     text-transform: uppercase;
     justify-content: center;
@@ -52,7 +56,7 @@
     row-gap: 10px;
     li + li::before {
       content: "•";
-      padding: 0px 1rem;
+      padding: 0px 2vw;
     }
   }
 }
