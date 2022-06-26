@@ -31,14 +31,7 @@ export default function Home() {
       <div className={styles.overlayData}>
 
         <section className={styles.hero}>
-          {/* <Image 
-            className={styles.bgImage}
-            src=''
-            alt=''
-            layout='fill'
-            objectFit='cover'
-            objectPosition='center'
-          /> */}
+        
           <div>
             <h1 className={styles.title} 
             >Weyland-Yutani Corp</h1>
