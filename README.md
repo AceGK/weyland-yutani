@@ -3,6 +3,7 @@ semiotic-standard from Aliens https://github.com/louh/semiotic-standard
 
 
 todo: 
+- js smooth scroll
 - mousewheel scroll to anchors
 - hamburger menu 
 - design sections better
