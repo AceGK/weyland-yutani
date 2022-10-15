@@ -30,71 +30,76 @@ export default function Home() {
 
       <div className={styles.overlayData}>
 
-        <section className={styles.hero}>
-        
-          <div>
-            <h1 className={styles.title} 
-            >Weyland-Yutani Corp</h1>
-            <div className={styles.logo}>
-              <Image src={Logo} alt='Weyland Yutani' layout='responsive' priority/>
-            </div>
-            <h1 className={styles.subTitle}>building better worlds</h1>
-          </div>
-          <ul className={styles.locations}>
-            <li>Tokyo</li>
-            <li>London</li>
-            <li>San Francisco</li>
-            <li>Sea of Tranquility</li>
-            <li>Thedus</li>
+        <Hero />
+
+        <Section
+          name="About"
+          className={styles.about}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta."
+        >
+          <ul className={styles.buttons}>
+            <li><a href='#engineering'>Engineering</a></li>
+            <li><a href='#exploration'>Exploration</a></li>
+            <li><a href='#terraforming'>Terraforming</a></li>
           </ul>
-        </section>
+        </Section>
 
-        <section id='about' className={styles.about}>
-          <div className={styles.row}>
-            <div>
-              <h1>About</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
-            </div>
-            <ul className={styles.buttons}>
-              <li><a href='#engineering'>Engineering</a></li>
-              <li><a href='#exploration'>Exploration</a></li>
-              <li><a href='#terraforming'>Terraforming</a></li>
-            </ul>
-          </div>
-        </section>
+        <Section
+          name="Engineering"
+          className={styles.engineering}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta."
+        />
 
-        <section id='engineering' className={styles.engineering}>
-          <div className={styles.row}>
-            <div>
-              <h1>Engineering</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
-            </div>
-            {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
-          </div>
-        </section>
+        <Section
+          name="Exploration"
+          className={styles.exploration}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta."
+        />
 
-        <section id='exploration' className={styles.exploration}>
-          <div className={styles.row}>
-            <div>
-              <h1>Exploration</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
-            </div>
-            {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
-          </div>
-        </section>
-
-        <section id='terraforming' className={styles.terraforming}>
-          <div className={styles.row}>
-            <div>
-              <h1>Terraforming</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta.</p>
-            </div>
-            {/* <div><img src="https://unsplash.it/400" alt="" /></div> */}
-          </div>
-        </section>
+        <Section
+          name="Terraforming"
+          className={styles.terraforming}
+          description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex modi iusto nam. Exercitationem doloribus id laboriosam libero voluptatibus praesentium animi rerum odio expedita quo dignissimos, mollitia commodi similique neque ipsam laudantium assumenda sapiente reprehenderit deserunt! Ratione ipsa dolor reiciendis soluta."
+        />
 
       </div>
 
     </>
   );
+}
+
+function Hero() {
+  return (
+    <section className={styles.hero}>
+      <div>
+        <h1 className={styles.hero__title}
+        >Weyland-Yutani Corp</h1>
+        <div className={styles.hero__logo}>
+          <Image src={Logo} alt='Weyland Yutani' layout='responsive' priority />
+        </div>
+        <h1 className={styles.hero__subtitle}>building better worlds</h1>
+      </div>
+      <ul className={styles.hero__locations}>
+        <li>Tokyo</li>
+        <li>London</li>
+        <li>San Francisco</li>
+        <li>Sea of Tranquility</li>
+        <li>Thedus</li>
+      </ul>
+    </section>
+  )
+}
+
+function Section(props) {
+  return (
+    <section id={props.name} className={props.className}>
+      <div className={styles.row}>
+        <div>
+          <h1>{props.name}</h1>
+          <p>{props.description}</p>
+        </div>
+        {props.children}
+      </div>
+    </section>
+  )
 }
