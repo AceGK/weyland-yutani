@@ -1,16 +1,30 @@
+@import 'styles/mixins';
+
 .footer {
-  padding:3em;
-  background:black;
-  display:flex;
+  padding: 3em;
+  background: black;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  p {
-    font-size:.8rem;
-    letter-spacing: .2ch;
-    color:var(--text2);
-    opacity:.5;
+  &__text {
+    font-size: 0.8rem;
+    letter-spacing: 0.2ch;
+    color: var(--text2);
+    opacity: 0.5;
     text-transform: uppercase;
+  }
+  &__logo {
+    width: 400px;
+    margin: auto;
+    // @include tablet() {
+    //   width: 160px;
+    //   padding: 0px;
+    // }
+    a {
+      display: flex;
+      align-items: center;
+    }
   }
 }
