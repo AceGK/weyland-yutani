@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
                 <i className="icon-bars-solid" title="menu"></i>
 
-                {/* <button className='hamburger' onClick={ handleToggle } aria-label="mobile menu">
+                <button className='hamburger' onClick={ handleToggle } aria-label="mobile menu">
                         {navbarOpen ? (
                             '+'
                         ) : (
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <li><Link href='#engineering'><a onClick={() => closeMenu()}>engineer</a></Link></li>
                     <li><Link href='#exploration'><a onClick={() => closeMenu()}>explore</a></Link></li>
                     <li><Link href='#terraforming'><a onClick={() => closeMenu()}>terraform</a></Link></li>
-                </ul> */}
+                </ul>
             </div>
         </nav>
     );

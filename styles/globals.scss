@@ -1,6 +1,8 @@
 @import 'styles/mixins';
 @import 'styles/variables';
 
+//#region Reset
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,10 +51,9 @@ table {
 	border-spacing: 0;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                    Globals                                 */
-/* -------------------------------------------------------------------------- */
+//#endregion
 
+//#region Globals
 
 @font-face {
   font-family: 'Microgramma-bold';
@@ -88,7 +89,7 @@ table {
 
 html,
 body {
-  background:hsl(0, 0%, 10%);
+  background:hsl(0, 0%, 0%);
   padding: 0;
   margin: 0;
   font-family:var(--ff-text);
@@ -152,11 +153,9 @@ a {
   right:60px;
   z-index: 2;
 }
+//#endregion
 
-
-/* -------------------------------------------------------------------------- */
-/*                            Primary Navigaton Bar                           */
-/* -------------------------------------------------------------------------- */
+//#region Nav
 nav {
   display:none;
   position:fixed;
@@ -264,33 +263,9 @@ nav {
     }
   }
 }
+//#endregion
 
-/* -------------------------------------------------------------------------- */
-/*                                 Footer                                     */
-/* -------------------------------------------------------------------------- */
-
-footer {
-  padding:3em;
-  background:black;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  p {
-    font-size:.8rem;
-    letter-spacing: .2ch;
-    color:var(--text2);
-    opacity:.5;
-    text-transform: uppercase;
-  }
-}
-
-
-/* -------------------------------------------------------------------------- */
-/*                               Scan Lines                                   */
-/* -------------------------------------------------------------------------- */
-
+//#region Scanlines
 
 /* REGULAR SCANLINES SETTINGS */
 
@@ -389,7 +364,7 @@ footer {
         }
     }
 
-
+//#endregion
 
 bg-white {
   background:white;

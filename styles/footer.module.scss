@@ -1,0 +1,16 @@
+.footer {
+  padding:3em;
+  background:black;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    font-size:.8rem;
+    letter-spacing: .2ch;
+    color:var(--text2);
+    opacity:.5;
+    text-transform: uppercase;
+  }
+}
