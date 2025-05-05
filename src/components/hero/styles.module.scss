@@ -33,12 +33,13 @@
     margin: 2% 0px 4% 0px;
   }
   &__subtitle {
-    font-size: clamp(.8rem, 2.7vw, 1.8rem);
+    font-size: clamp(.8rem, 2.7vw, 1.625rem);
     color: var(--text2);
     text-transform: uppercase;
     font-weight: 800;
     font-family: var(--ff-subtitle);
     word-spacing: -0.1em;
+    letter-spacing: 0.1em;
   }
   &__locations {
     display: flex;
