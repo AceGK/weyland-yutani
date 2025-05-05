@@ -31,7 +31,8 @@
     flex-direction: column;
   }
   h2 {
-    font-size: clamp(1.2rem, 2vw, 3rem);
+    // font-size: clamp(1.2rem, 2vw, 3rem);
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
     color: var(--text2);
     margin-bottom: 25px;
     text-transform: uppercase;

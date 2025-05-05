@@ -1,5 +1,5 @@
 .button {
-  --background-color: rgb(15, 13, 13);
+  --background-color: black;
   --border-color: var(--accent1);
   --border-width: 0.07em;
   --edge-size: 0.5em;
@@ -27,13 +27,15 @@
     0% var(--edge-size)
   );
 
-  // Make sure pseudo-elements work
+  touch-action: manipulation;
+
   &::before,
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
+    pointer-events: none; // ✅ Prevent blocking interactions
   }
 
   &::before {
@@ -51,13 +53,18 @@
       calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
       var(--border-width) calc(100% - var(--border-width))
     );
+    transition: clip-path 300ms ease;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: black;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
     clip-path: polygon(
       calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
       calc(100% - var(--border-width)) var(--border-width),
