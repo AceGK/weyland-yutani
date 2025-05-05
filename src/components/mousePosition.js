@@ -1,6 +1,6 @@
 import { useMousePosition } from "../hooks/useMousePosition";
 
-export default function mousePosition() {
+export default function MousePosition() {
 
   const position = useMousePosition();
 

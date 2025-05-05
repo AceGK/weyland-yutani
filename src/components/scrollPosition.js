@@ -1,6 +1,6 @@
 import { getMaxScroll, useWindowScrollPositions } from "../hooks/useScrollPosition";
 
-export default function scrollPosition() {
+export default function ScrollPosition() {
 
 	const { scrollX, scrollY } = useWindowScrollPositions()
 	
