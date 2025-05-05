@@ -1,5 +1,5 @@
-@import 'styles/mixins';
-@import 'styles/variables';
+@import 'mixins';
+@import 'variables';
 
 //#region Reset
 
@@ -94,6 +94,7 @@ body {
   margin: 0;
   font-family:var(--ff-text);
   scroll-behavior: smooth;
+  cursor:crosshair;
 }
 
 p {
@@ -155,115 +156,6 @@ a {
 }
 //#endregion
 
-//#region Nav
-nav {
-  display:none;
-  position:fixed;
-  width:100%;
-  top: 0;
-  z-index: 999;
-  background:rgba(0,0,0,.8);
-  svg {
-    display:flex;
-  }
-  ul {
-    list-style-type: none;
-    margin:0px;
-    padding:0px;
-  }
-  .nav-bar { 
-    --gap:1.5em;
-    color:var(--text2);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:10px 20px;
-    height:100%;
-    @include tablet() {
-      height:60px;
-    }
-    .logo {
-      width:250px;
-      margin:auto;
-      @include tablet() {
-        width: 160px;
-        padding:0px;
-      }
-      a {
-        display: flex;
-        align-items: center;
-      }
-    }
-    .nav-menu { 
-      display:flex;
-      grid-gap: var(--gap);
-      text-transform: uppercase;
-      font-weight:400;
-      letter-spacing: 1px;
-      pointer-events: none;
-      & > * {
-        pointer-events:auto;
-        transition: 300ms opacity;
-      }
-      // mobile menu
-      @include tablet() {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        text-align: center;
-        padding: 25px 25px 50px 25px;
-        font-size:1.4rem;
-        width: 100%;
-        background-color: var(--accent1);
-        z-index:9999;
-      }
-    }
-    ul.nav-menu:hover > {
-      li {
-        opacity: 0.5;
-        @include tablet() {
-          opacity: 1;
-        }
-      }
-      li:hover {
-        opacity: 1;
-      }
-    }
-    .showMenu {
-      display:flex;
-      @include tablet() {
-        display:none;
-      }
-    }
-    .user-menu {
-      display:flex;
-      align-items: center;
-      grid-gap:var(--gap);
-      padding-left: var(--gap);
-    }
-    .icon {
-      width:1em;
-    }
-    .hamburger {
-      display: none;
-      background: none;
-      font-size:1rem;
-      border: none;
-      color:white;
-      padding:0px;
-      &:hover {
-        cursor:pointer;
-      }
-      @include tablet() {
-        display:block;
-        padding-right:var(--gap);
-      }
-    }
-  }
-}
-//#endregion
 
 //#region Scanlines
 
