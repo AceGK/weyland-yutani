@@ -1,31 +1,30 @@
-@import 'mixins'; 
-
 .footer {
-  padding: 3em;
+  padding: 3em 1.5rem;
   background: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
   &__text {
     font-size: 0.8rem;
     letter-spacing: 0.2ch;
     color: var(--text2);
     opacity: 0.5;
     text-transform: uppercase;
+    margin-top:0.5rem;
   }
+
   &__logo {
-    width:100%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 360px;
     margin: auto;
-    text-wrap:balance;
+    position: relative;
+    aspect-ratio: 4 / 1; // adjust if your logo has different proportions
+
     img {
-      padding-bottom:1rem;
-    }
-    a {
-      display: flex;
-      align-items: center;
+      object-fit: contain;
     }
   }
 }

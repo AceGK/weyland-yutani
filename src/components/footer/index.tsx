@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import styles from './styles.module.scss';
+import Image from "next/image";
+import styles from "./styles.module.scss";
 
 const Footer: React.FC = () => {
   return (
@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
         <Image
           src="/weyland-yutani-wings.svg"
           alt="Weyland Yutani"
-          width={320}
-          height={80}
+          fill
+          className={styles.footer__img}
         />
-        <span className={styles.footer__text}>
+      </div>
+      <span className={styles.footer__text}>
           Weyland-Yutani Corporation © 2122
         </span>
-      </div>
     </footer>
   );
 };

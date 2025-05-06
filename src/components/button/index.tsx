@@ -19,9 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <div className={`${styles.button} ${fill ? styles.fill : ""}`}>
-        <Link href={href}>{text}</Link>
-      </div>
+        <Link href={href} className={`${styles.button} ${fill ? styles.fill : ""}`}>{text}</Link>
     );
   }
 
