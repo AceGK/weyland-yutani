@@ -75,19 +75,21 @@
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
   justify-content: center;
+  gap: 1em;
   padding: 0 1rem;
   list-style: none;
-  max-width: 700px; // controls how many can fit per row
+  margin: 0 auto;
+  max-width: 900px;
   width: 100%;
 
   a {
-    flex: 0 1 calc(25% - 5em); // ⬅️ up to 4 per row, minus gap
-    min-width: 150px; // ⬅️ don't go smaller than this
-    max-width: 200px; // ⬅️ optional max width per button
+    flex: 1 0 20%; 
+    max-width: 20%;   
+    min-width: 150px;
     text-align: center;
     white-space: nowrap;
     display: block;
+    padding:0.5rem 0;
   }
 }
