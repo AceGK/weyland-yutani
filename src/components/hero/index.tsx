@@ -1,12 +1,21 @@
-import styles from './styles.module.scss';
-import Image from 'next/image';
-import Logo from '../../assets/weyland-yutani.svg';
-import Button from '../button';
+import styles from "./styles.module.scss";
+import Logo from "../../assets/weyland-yutani.svg";
+import Button from "../button";
+import ScrollIcon from "../../assets/scroll-down.svg";
+
+const cities = [
+  "Tokyo",
+  "London",
+  "San Francisco",
+  "Sea of Tranquility",
+  "Thedus",
+];
 
 const Hero: React.FC = () => {
   return (
     <section className={styles.hero}>
       <div>
+        {/* <h1 className={styles.hero__japanese}>ウェイランド・湯谷</h1> */}
         <h1 className={styles.hero__title}>Weyland-Yutani Corp</h1>
         <div className={styles.hero__logo}>
           <Logo />
@@ -14,13 +23,13 @@ const Hero: React.FC = () => {
         <h1 className={styles.hero__subtitle}>building better worlds</h1>
       </div>
 
-      <ul className={styles.hero__locations}>
-        <li>Tokyo</li>
-        <li>London</li>
-        <li>San Francisco</li>
-        <li>Sea of Tranquility</li>
-        <li>Thedus</li>
-      </ul>
+      <div id="locationList" className={styles.hero__locations}>
+        {cities.map((city) => (
+          <span key={city} className={styles.location}>
+            {city}
+          </span>
+        ))}
+      </div>
 
       <ul className={styles.buttons}>
         <Button text="About" href="#about" />
@@ -28,6 +37,19 @@ const Hero: React.FC = () => {
         <Button text="Exploration" href="#exploration" />
         <Button text="Terraforming" href="#terraforming" />
       </ul>
+
+      <button
+        className={styles.scrollIndicator}
+        onClick={() => {
+          const nextSection = document.getElementById("about");
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+        aria-label="Scroll to next section"
+      >
+        <ScrollIcon/>
+      </button>
     </section>
   );
 };
