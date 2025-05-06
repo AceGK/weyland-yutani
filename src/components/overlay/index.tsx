@@ -12,7 +12,6 @@ export default function Overlay() {
     const formatTime = () => {
       const now = new Date();
 
-      // Sci-fi style: YYYY/MM/DD — HH:MM:SS ST
       const year = now.getFullYear() + 100;
       const month = String(now.getMonth() + 1).padStart(2, "0");
       const day = String(now.getDate()).padStart(2, "0");
@@ -20,13 +19,12 @@ export default function Overlay() {
       const minutes = String(now.getMinutes()).padStart(2, "0");
       const seconds = String(now.getSeconds()).padStart(2, "0");
 
-      // Optional suffix: standard time, Earth time, etc
       setTimestamp(`${year}/${month}/${day} — ${hours}:${minutes}:${seconds} ST`);
     };
 
-    formatTime(); // initialize
+    formatTime(); 
     const interval = setInterval(formatTime, 1000); // update every second
-    return () => clearInterval(interval); // cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (

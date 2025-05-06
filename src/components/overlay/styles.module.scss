@@ -1,85 +1,121 @@
 @import "mixins";
 
 .fullOverlay {
-	--overlayMargin: clamp(1em, 3vw, 2em);
-	pointer-events: none;
-	opacity: .8;
-	width:      calc(100% - calc(var(--overlayMargin) * 2));
-  height:     calc(100% - calc(var(--overlayMargin) * 2)); 
-  z-index:    100;
-  top:        var(--overlayMargin); 
-  left:       var(--overlayMargin);  
-  position:   fixed; 
-	--corner-weight:2px;
-	background: 
+  --overlayMargin: clamp(1em, 3vw, 2em);
+  pointer-events: none;
+  opacity: 0.8;
+  width: calc(100% - calc(var(--overlayMargin) * 2));
+  height: calc(100% - calc(var(--overlayMargin) * 2));
+  z-index: 100;
+  top: var(--overlayMargin);
+  left: var(--overlayMargin);
+  position: fixed;
+  --corner-weight: 2px;
+  background: 
 		// left (top, bottom)
-		linear-gradient(to right, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 var(--corner-weight),
-    linear-gradient(to right, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 calc(100% - var(--corner-weight)),
-		
-		// right (top, bottom)
-    linear-gradient(to left, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% var(--corner-weight),
-    linear-gradient(to left, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% calc(100% - var(--corner-weight)),
-    
-		//top (left, right)
-		linear-gradient(to bottom, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 0,
-    linear-gradient(to bottom, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% 0,
+    linear-gradient(
+        to right,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      0 var(--corner-weight),
+    linear-gradient(
+        to right,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      0 calc(100% - var(--corner-weight)),
+    // right (top, bottom)
+    linear-gradient(
+        to left,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      100% var(--corner-weight),
+    linear-gradient(
+        to left,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      100% calc(100% - var(--corner-weight)),
+    //top (left, right)
+    linear-gradient(
+        to bottom,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      0 0,
+    linear-gradient(
+        to bottom,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      100% 0,
+    //bottom (left, right)
+    linear-gradient(
+        to top,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      0 100%,
+    linear-gradient(
+        to top,
+        var(--accent1) var(--corner-weight),
+        transparent var(--corner-weight)
+      )
+      100% 100%;
 
-		//bottom (left, right)
-    linear-gradient(to top, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 0 100%,
-    linear-gradient(to top, var(--accent1) var(--corner-weight), transparent var(--corner-weight)) 100% 100%;
-		
   background-repeat: no-repeat;
   background-size: 30px 30px;
   @include tablet() {
-    background-size:3vw 3vw;
-    
+    background-size: 3vw 3vw;
   }
 }
 
 .dataTopLeft {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  top:-4px;
-  left:45px;
+  color: var(--text2);
+  font-size: 0.6rem;
+  position: absolute;
+  top: -4px;
+  left: 45px;
   z-index: 2;
-  @include tablet(){
-    left:var(--data-position);
+  @include tablet() {
+    left: var(--data-position);
   }
 }
 
 .dataTopRight {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  top:-4px;
-  right:45px;
+  color: var(--text2);
+  font-size: 0.6rem;
+  position: absolute;
+  top: -4px;
+  right: 45px;
   z-index: 2;
-  @include tablet(){
-    right:var(--data-position);
+  @include tablet() {
+    right: var(--data-position);
   }
 }
 
 .dataBottomLeft {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  bottom:-4px;
-  left:45px;
+  color: var(--text2);
+  font-size: 0.6rem;
+  position: absolute;
+  bottom: -4px;
+  left: 45px;
   z-index: 2;
-  @include tablet(){
-    left:var(--data-position);
+  @include tablet() {
+    left: var(--data-position);
   }
 }
 
 .dataBottomRight {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  bottom:-4px;
-  right:45px;
+  color: var(--text2);
+  font-size: 0.6rem;
+  position: absolute;
+  bottom: -4px;
+  right: 45px;
   z-index: 2;
-  @include tablet(){
-    right:var(--data-position);
+  @include tablet() {
+    right: var(--data-position);
   }
 }

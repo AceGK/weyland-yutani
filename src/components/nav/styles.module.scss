@@ -1,9 +1,40 @@
 .nav {
-  position:fixed;
-  right:30px;
-  top:30px;
-  width:fit-content;
-  font-size:1.8rem;
-  color:var(--accent1);
-  z-index:100;
+  position: fixed;
+  top: clamp(0.5em, 3vh, 1em);
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  font-size: 1.8rem;
+  color: var(--accent1);
+  z-index: 100;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  .mobileMenuButton {
+    background:rgba(0, 0, 0, 0.75);
+    color:var(--text2);
+    border:1px solid var(--accent1);
+    outline:none;
+    padding:0.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+  } 
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding:0px;
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-20%);
+  }
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
 }

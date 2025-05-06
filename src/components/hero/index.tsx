@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
-import Logo from "../../assets/weyland-yutani.svg";
+import Logo from "../../assets/logos/weyland-yutani.svg";
 import Button from "../button";
-import ScrollIcon from "../../assets/scroll-down.svg";
+import ScrollIcon from "../../assets/icons/scroll-down.svg";
 
 const cities = [
   "Tokyo",

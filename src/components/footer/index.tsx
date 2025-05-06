@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import WeylandYutaniWings from "../../assets/weyland-yutani-wings.svg";
+import WeylandYutaniWings from "../../assets/logos/weyland-yutani-wings.svg";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
