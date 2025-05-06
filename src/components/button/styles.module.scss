@@ -1,5 +1,4 @@
 .button {
-  --background-color: black;
   --border-color: var(--accent1);
   --border-width: 0.07em;
   --edge-size: 0.5em;
@@ -11,13 +10,13 @@
   font-family: var(--ff-mono, monospace);
 
   cursor: pointer;
-  background: var(--background-color);
   padding: 0.5em 1.5em;
   border: 0;
   position: relative;
   isolation: isolate;
   display: inline-grid;
   place-content: center;
+
   clip-path: polygon(
     var(--edge-size) 0%,
     100% 0,
@@ -35,7 +34,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    pointer-events: none; // ✅ Prevent blocking interactions
+    pointer-events: none;
   }
 
   &::before {
@@ -44,7 +43,7 @@
   }
 
   &::after {
-    background: var(--background-color);
+    background: black;
     clip-path: polygon(
       var(--border-width) calc(var(--edge-size) + var(--border-width) * 0.5),
       calc(var(--edge-size) + var(--border-width) * 0.5) var(--border-width),
@@ -53,25 +52,42 @@
       calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
       var(--border-width) calc(100% - var(--border-width))
     );
-    transition: clip-path 300ms ease;
   }
 
   &:hover,
   &:focus,
   &:active {
     color: black;
+    font-weight: 600;
   }
 
   &:hover::after,
   &:focus::after,
   &:active::after {
-    clip-path: polygon(
-      calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
-      calc(100% - var(--border-width)) var(--border-width),
-      calc(100% - var(--border-width)) var(--border-width),
-      calc(100% - var(--border-width)) calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
-      calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
-      calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width))
-    );
+    background: var(--accent1);
+  }
+
+  &.fill {
+    color: black;
+
+    &::after {
+      background: var(--accent1); 
+    }
+
+    &::before {
+      background: var(--accent1); 
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--accent1);
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      background: black;
+    }
   }
 }

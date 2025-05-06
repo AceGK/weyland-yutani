@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
   > div {
-    margin:0px 10px;
+    margin: 0px 10px;
     z-index: 2;
   }
   &__title {
@@ -29,11 +29,20 @@
     font-family: var(--ff-title);
   }
   &__logo {
-    width:100%;
-    margin: 2% 0px 4% 0px;
+    position: relative;
+    height: clamp(80px, 21vw, 200px); // Fixed height
+    width: 100%;
+    margin:0.5rem 0rem;
+    
+    :global(img) {
+      object-fit: contain;
+      object-position: center;
+      height: 100%;
+      width: auto;
+    }
   }
   &__subtitle {
-    font-size: clamp(.8rem, 2.7vw, 1.625rem);
+    font-size: clamp(0.8rem, 2.7vw, 1.625rem);
     color: var(--text2);
     text-transform: uppercase;
     font-weight: 800;
@@ -44,16 +53,16 @@
   &__locations {
     display: flex;
     flex-wrap: wrap;
-    text-wrap:balance;
+    text-wrap: balance;
     color: var(--text2);
-    font-size: clamp(.8rem, 1.9vw, 1.2rem);
+    font-size: clamp(0.8rem, 1.9vw, 1.2rem);
     opacity: 0.8;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
     row-gap: 5px;
-    margin:2em auto;
-    max-width:90%;
+    margin: 2em auto;
+    max-width: 90%;
     li + li::before {
       content: "▪";
       bottom: 2px;
@@ -74,7 +83,7 @@
   flex-wrap: wrap;
 
   a {
-    flex: 1; 
+    flex: 1;
     min-width: 150px;
     max-width: fit-content;
     display: block;

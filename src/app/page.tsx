@@ -1,9 +1,10 @@
-'use client'
+"use client";
 import React from "react";
-import MousePosition from "../components/mousePosition";
-import ScrollPosition from "../components/scrollPosition";
-import WindowDimensions from "../components/windowDimensions";
+import MousePosition from "../components/MousePosition";
+import ScrollPosition from "../components/ScrollPosition";
+import WindowDimensions from "../components/WindowDimensions";
 import Hero from "../components/hero";
+import ContactForm from "../components/contactForm";
 
 import styles from "../styles/Home.module.scss";
 import useScrollHash from "../hooks/useScrollHash";
@@ -16,7 +17,7 @@ interface SectionProps {
 }
 
 export default function Home() {
-  useScrollHash(["about", "engineering", "exploration", "terraforming"]);
+  useScrollHash(["about", "engineering", "exploration", "terraforming", "contact"]);
 
   return (
     <>
@@ -28,9 +29,9 @@ export default function Home() {
           <p>
             <strong>Weyland-Yutani Corporation</strong> is the galaxy&apos;s
             foremost leader in advanced technologies, off-world colonization,
-            and synthetic intelligence. With a proud legacy that spans
-            centuries and sectors, we continue to shape the future through
-            innovation, discipline, and vision.
+            and synthetic intelligence. With a proud legacy that spans centuries
+            and sectors, we continue to shape the future through innovation,
+            discipline, and vision.
           </p>
           <p>
             From our first atmospheric processors on Thedus to successful
@@ -43,8 +44,8 @@ export default function Home() {
           <p>
             Pioneering humanity&apos;s future means solving the impossible. Our
             teams of cyberneticists, structural engineers, and AI architects
-            work across the solar system and beyond to develop technologies
-            that redefine the boundaries of science.
+            work across the solar system and beyond to develop technologies that
+            redefine the boundaries of science.
           </p>
           <ul>
             <li>
@@ -75,7 +76,8 @@ export default function Home() {
               Engineer-designated system
             </li>
             <li>
-              Reclamation project underway at <strong>Hadley&apos;s Hope</strong>, LV-426
+              Reclamation project underway at{" "}
+              <strong>Hadley&apos;s Hope</strong>, LV-426
             </li>
           </ul>
           <p>
@@ -85,11 +87,11 @@ export default function Home() {
 
         <Section name="terraforming" className={styles.terraforming}>
           <p>
-            Our <strong>Atmospheric Processing Plants</strong> have
-            successfully transformed barren rocks into livable ecosystems — often
-            in under a decade. Through controlled climate engineering, ecosystem
-            seeding, and proprietary geoforming techniques, we enable
-            sustainable colonization where nature never intended.
+            Our <strong>Atmospheric Processing Plants</strong> have successfully
+            transformed barren rocks into livable ecosystems — often in under a
+            decade. Through controlled climate engineering, ecosystem seeding,
+            and proprietary geoforming techniques, we enable sustainable
+            colonization where nature never intended.
           </p>
           <ul>
             <li>
@@ -111,6 +113,13 @@ export default function Home() {
             </strong>
           </p>
         </Section>
+
+        <Section name="contact" className={styles.contact}>
+          <p className={styles.subtitle}>
+            Contact Weyland-Yutani via subspace transmission
+          </p>
+          <ContactForm />
+        </Section>
       </div>
     </>
   );
@@ -118,9 +127,9 @@ export default function Home() {
 
 function Overlay() {
   const current = new Date();
-  const date = `${current.getDate()}/${
-    current.getMonth() + 1
-  }/${current.getFullYear() + 100}`;
+  const date = `${current.getDate()}/${current.getMonth() + 1}/${
+    current.getFullYear() + 100
+  }`;
 
   return (
     <>
@@ -141,7 +150,12 @@ function Overlay() {
   );
 }
 
-function Section({ name, className, description, children }: SectionProps): JSX.Element{
+function Section({
+  name,
+  className,
+  description,
+  children,
+}: SectionProps): JSX.Element {
   return (
     <section id={name} className={className}>
       <div className={styles.row}>
