@@ -3,6 +3,14 @@ html {
     --text2: hsl(0, 0%, 85%);
     --accent1: #D7A200;
     --accent2: rgba(255, 255, 255, .8);
+    --accent3: #74ACBF;
+    --gradient1: linear-gradient(
+        to right,
+        #daa947,   /* warm gold */
+        #b88f60,   /* muted bronze */
+        #4cb393,   /* desaturated teal */
+        #2f9e93    /* deeper teal */
+      );
     --bkg1: hsl(0, 0%, 10%);
     --overlay: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 

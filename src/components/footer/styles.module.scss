@@ -26,5 +26,9 @@
     img {
       object-fit: contain;
     }
+    color:var(--text2);
+    &:hover {
+        color:var(--accent3);
+    }
   }
 }

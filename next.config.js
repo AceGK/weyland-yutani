@@ -11,6 +11,10 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src/styles')],
   },
   webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
     config.resolve.alias['@styles'] = path.join(__dirname, 'src/styles');
     return config;
   },
