@@ -2,6 +2,7 @@ import "../styles/globals.scss";
 import type { ReactNode } from "react";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
+import Overlay from "../components/overlay";
 
 export const metadata = {
   title: "Weyland Yutani Corp",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <div className="content scanlines">
+          <Overlay />
           {/* <Nav /> */}
           {children}
           <Footer />

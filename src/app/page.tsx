@@ -21,7 +21,6 @@ export default function Home() {
 
   return (
     <>
-      <Overlay />
       <div className={styles.overlayData}>
         <Hero />
 
@@ -120,31 +119,6 @@ export default function Home() {
           </p>
           <ContactForm />
         </Section>
-      </div>
-    </>
-  );
-}
-
-function Overlay() {
-  const current = new Date();
-  const date = `${current.getDate()}/${current.getMonth() + 1}/${
-    current.getFullYear() + 100
-  }`;
-
-  return (
-    <>
-      <div className="vignette"></div>
-      <div className={styles.fullOverlay}>
-        <div className={styles.dataTopLeft}>
-          <WindowDimensions />
-        </div>
-        <div className={styles.dataTopRight}>
-          <MousePosition />
-        </div>
-        <div className={styles.dataBottomLeft}>
-          <ScrollPosition />
-        </div>
-        <div className={styles.dataBottomRight}>{date}</div>
       </div>
     </>
   );

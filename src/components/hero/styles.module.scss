@@ -51,7 +51,7 @@
       background-color: #f9d24b;
       opacity: 0.2;
       filter: blur(30px);
-      border-radius: 10%; // <- make oval with 10% or higher
+      border-radius: 10%;
       z-index: -1;
       pointer-events: none;
     }
@@ -127,10 +127,14 @@
   transition: transform 0.3s ease;
   width: 2rem;
   height: 2rem;
+  svg {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  }
 
   &:hover {
     transform: translateY(4px);
     color: var(--accent1);
+    filter: drop-shadow(0 0 5px rgba(215, 162, 0, 0.3));
   }
 }
 
