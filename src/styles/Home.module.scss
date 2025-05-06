@@ -60,7 +60,7 @@
     font-weight: 300;
     text-wrap: balance;
     color: var(--text2);
-    text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
+    // text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
   }
 
   ul {
@@ -83,7 +83,7 @@
       font-weight: 300;
       line-height: 1.6;
       color: var(--text2);
-      text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
+      // text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
 
       &::before {
         content: '▸';
@@ -152,7 +152,7 @@
     font-size: 1rem;
     color: var(--text2);
     max-width: 600px;
-    text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
+    // text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
   }
 }
 

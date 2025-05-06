@@ -110,7 +110,7 @@
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px var(--clr-1) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.3) inset !important;
     box-shadow: 0 0 0px 1000px var(--clr-1) inset !important;
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: white !important;
