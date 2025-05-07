@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <div className="content scanlines">
           <Overlay />
-          {/* <Nav /> */}
+          <Nav />
           {children}
           <Footer />
         </div>

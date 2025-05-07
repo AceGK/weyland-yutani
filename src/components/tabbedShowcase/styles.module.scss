@@ -1,0 +1,99 @@
+.wrapper {
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  min-height: 500px;
+  // background: #0b0d17;
+  color: var(--text2);
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.active {
+  color:black;
+  font-weight:600;
+  &::after {
+    background:var(--accent1);
+  }
+}
+
+$image-chamfer-size: 5rem;
+
+$image-chamfer-size: 4rem;
+
+.imageArea {
+  flex: 2;
+  position: relative;
+  height: 480px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - $image-chamfer-size) 0,
+    100% $image-chamfer-size,
+    100% 100%,
+    $image-chamfer-size 100%,
+    0 calc(100% - $image-chamfer-size)
+  );
+
+  // Triangle overlays
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    // z-index: 2;
+  }
+}
+
+
+.image {
+  object-fit: cover;
+}
+
+.tab {
+  display:flex;
+  flex-direction:column;
+  button {
+    width:100%;
+  }
+  p {
+    background:rgba(0, 0, 0, 0.521);
+    padding:1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+  }
+
+  .imageArea {
+    flex:unset;
+    height: 200px;
+    clip-path: none;
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  .tabs {
+    width: 100%;
+    gap:1rem;
+  }
+
+  .tab p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}

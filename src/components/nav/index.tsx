@@ -1,35 +1,145 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
-import MenuIcon from "../../assets/icons/bars-light.svg";
+import Logo from "../../assets/logos/weyland-yutani.svg";
+import MenuButton from "../../assets/icons/bars-minimal.svg";
+import Chevron from "../../assets/icons/chevron-down.svg";
+import Link from "next/link";
 
 const Nav: React.FC = () => {
-  const [show, setShow] = useState(true);
+  const [scrollUp, setScrollUp] = useState(true);
+  const [showLogo, setShowLogo] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [suppressScrollCheck, setSuppressScrollCheck] = useState(false);
 
   useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (anchor) {
+        setSuppressScrollCheck(true);
+        setTimeout(() => setSuppressScrollCheck(false), 1000);
+      }
+    };
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const halfScreen = window.innerHeight * 0.5;
+      const triggerPoint = window.innerHeight * 1.1;
 
-      if (currentScrollY < lastScrollY) {
-        setShow(true); // scrolling up
-      } else {
-        setShow(false); // scrolling down
+      setShowLogo(currentScrollY > halfScreen);
+
+      if (!suppressScrollCheck) {
+        setScrollUp(
+          currentScrollY < lastScrollY || currentScrollY < triggerPoint
+        );
       }
 
       setLastScrollY(currentScrollY);
     };
 
+    document.addEventListener("click", handleAnchorClick);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+
+    return () => {
+      document.removeEventListener("click", handleAnchorClick);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY, suppressScrollCheck]);
 
   return (
-    <div className={`${styles.nav} ${show ? styles.visible : styles.hidden}`}>
-      <button className={styles.mobileMenuButton} aria-label="Menu">
-      <MenuIcon />
-      </button>
-    </div>
+    <>
+      <div
+        className={`${styles.nav} ${
+          scrollUp ? styles.visible : styles.hidden
+        } ${showLogo ? styles.showLogo : ""}`}
+      >
+        <div className={styles.left}>
+          <div className={styles.dropdown}>
+            <button
+              className={styles.dropdownToggle}
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+              aria-expanded={isDropdownOpen}
+              aria-controls="aboutDropdown"
+            >
+              about
+              <Chevron
+                className={`${styles.chevron} ${
+                  isDropdownOpen ? styles.open : ""
+                }`}
+              />
+            </button>
+            {isDropdownOpen && (
+              <div className={styles.dropdownMenu} id="aboutDropdown">
+                {[
+                  { label: "Our Mission", href: "#our-mission" },
+                  { label: "Engineering", href: "#engineering" },
+                  { label: "Exploration", href: "#exploration" },
+                  { label: "Terraforming", href: "#terraforming" },
+                ].map(({ label, href }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+          <a href="#technology">technology</a>
+        </div>
+
+        <Link
+          href="/"
+          className={`${styles.center} ${showLogo ? styles.centerVisible : ""}`}
+        >
+          <Logo />
+        </Link>
+
+        <div className={styles.right}>
+          <a href="#news">news</a>
+          <a href="#contact">contact</a>
+        </div>
+
+        <button
+          className={styles.menuButton}
+          onClick={() => setIsMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <MenuButton />
+        </button>
+      </div>
+
+      {isMenuOpen && (
+        <div className={styles.modalNav} aria-hidden={!isMenuOpen}>
+          <button
+            className={styles.closeButton}
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+          <nav className={styles.modalMenu}>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>
+              About
+            </a>
+            <a href="#technology" onClick={() => setIsMenuOpen(false)}>
+              Technology
+            </a>
+            <a href="#news" onClick={() => setIsMenuOpen(false)}>
+              News
+            </a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </a>
+          </nav>
+        </div>
+      )}
+    </>
   );
 };
 

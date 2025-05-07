@@ -100,6 +100,7 @@ body {
 p {
   line-height:1.4rem;
   font-size: clamp(.8rem, 1.8vw, 1rem);
+  padding-bottom:1.2rem;
 }
 
 a {
@@ -109,6 +110,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+strong {
+  font-weight: 600;
+  color: var(--accent1);
+  letter-spacing: 0.05em;
+}
+
+em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.center-text {
+  text-align: center;
+  text-align: balance;
 }
 
 .vignette {
@@ -121,39 +139,7 @@ a {
   pointer-events: none;
 }
 
-// only used on /slider
-.data-top-left {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  top:-4px;
-  left:60px;
-  z-index: 2;
-}
-.data-top-right {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  top:-4px;
-  right:60px;
-  z-index: 2;
-}
-.data-bottom-left {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  bottom:-4px;
-  left:60px;
-  z-index: 2;
-}
-.data-bottom-right {
-  color:var(--text2);
-  font-size:.6rem;
-  position:absolute;
-  bottom:-4px;
-  right:60px;
-  z-index: 2;
-}
+
 //#endregion
 
 
@@ -257,10 +243,3 @@ a {
     }
 
 //#endregion
-
-bg-white {
-  background:white;
-}
-bg-black {
-  background:black;
-}

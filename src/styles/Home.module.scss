@@ -1,7 +1,7 @@
 @import "mixins";
 
 .bgImage {
-  z-index:0;
+  z-index: 0;
 }
 
 :is(.about, .engineering, .exploration, .terraforming) {
@@ -24,9 +24,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
   min-height: calc(100vh - (2em * 2));
-  
+
   @include tablet() {
     flex-direction: column;
   }
@@ -34,15 +33,12 @@
     // font-size: clamp(1.2rem, 2vw, 3rem);
     font-size: clamp(1.25rem, 2.5vw, 2.5rem);
     color: var(--text2);
-    margin-bottom: 25px;
+    margin: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: var(--ff-title);
+    text-align: center;
   }
-  // div {
-  //   // max-width: 900px;
-  //   z-index: 3;
-  // }
 }
 
 .body {
@@ -50,9 +46,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
-  max-width: 900px;
-  text-align: center;
+  gap: 1em;
+  max-width: 1200px;
+  width: 100%;
 
   p {
     font-size: 0.95rem;
@@ -64,7 +60,7 @@
   }
 
   ul {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     // align-items: center;
@@ -72,8 +68,8 @@
     padding: 0;
     margin: 0;
     text-align: left;
-    max-width:500px;
-    gap:0.5rem;
+    max-width: 500px;
+    gap: 0.5rem;
     // text-wrap:balance;
 
     li {
@@ -86,24 +82,13 @@
       // text-shadow: 0 0 2px rgba(0, 255, 255, 0.25);
 
       &::before {
-        content: '▸';
+        content: "▸";
         position: absolute;
         left: 0;
         color: var(--accent1);
         font-size: 1em;
       }
     }
-  }
-
-  strong {
-    font-weight: 600;
-    color: var(--accent1);
-    letter-spacing: 0.05em;
-  }
-
-  em {
-    font-style: italic;
-    font-weight: 600;
   }
 }
 
@@ -129,6 +114,60 @@
 .terraforming {
   background-image: url("/photos/8.jpeg"),
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.technology {
+  background-image: url("/photos/15.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+  background-blend-mode: overlay;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  p {
+    max-width: 900px;
+  }
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    // color: var(--accent1);
+    font-weight: 700;
+    text-transform: uppercase;
+    // font-family: var(--ff-title);
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+  .techImage {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+  }
 }
 
 .contact {

@@ -31,12 +31,12 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
-      <ul className={styles.buttons}>
+      {/* <ul className={styles.buttons}>
         <Button text="About" href="#about" />
         <Button text="Engineering" href="#engineering" />
         <Button text="Exploration" href="#exploration" />
         <Button text="Terraforming" href="#terraforming" />
-      </ul>
+      </ul> */}
 
       <button
         className={styles.scrollIndicator}
