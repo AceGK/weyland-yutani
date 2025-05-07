@@ -5,31 +5,38 @@ import Logo from "../../assets/logos/weyland-yutani.svg";
 import MenuButton from "../../assets/icons/bars-minimal.svg";
 import Chevron from "../../assets/icons/chevron-down.svg";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Nav: React.FC = () => {
+  const pathname = usePathname();
+  const [showLogo, setShowLogo] = useState(pathname !== "/");
   const [scrollUp, setScrollUp] = useState(true);
-  const [showLogo, setShowLogo] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [suppressScrollCheck, setSuppressScrollCheck] = useState(false);
 
   useEffect(() => {
-    const handleAnchorClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest('a[href^="#"]') as HTMLAnchorElement | null;
-      if (anchor) {
-        setSuppressScrollCheck(true);
-        setTimeout(() => setSuppressScrollCheck(false), 1000);
-      }
+    const handleHashChangeStart = () => {
+      setSuppressScrollCheck(true);
+      setTimeout(() => setSuppressScrollCheck(false), 1000);
     };
+
+    if (pathname !== "/" || pathname.includes("#")) {
+      setShowLogo(true);
+    }
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const halfScreen = window.innerHeight * 0.5;
       const triggerPoint = window.innerHeight * 1.1;
 
-      setShowLogo(currentScrollY > halfScreen);
+      if (pathname !== "/") {
+        setShowLogo(true);
+      } else {
+        setShowLogo(currentScrollY > halfScreen);
+        console.log(pathname);
+      }
 
       if (!suppressScrollCheck) {
         setScrollUp(
@@ -40,14 +47,21 @@ const Nav: React.FC = () => {
       setLastScrollY(currentScrollY);
     };
 
-    document.addEventListener("click", handleAnchorClick);
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("hashchange", handleHashChangeStart, true);
 
     return () => {
-      document.removeEventListener("click", handleAnchorClick);
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", handleHashChangeStart, true);
     };
-  }, [lastScrollY, suppressScrollCheck]);
+  }, [lastScrollY, suppressScrollCheck, pathname]);
+
+  useEffect(() => {
+    // Show logo immediately if URL has a hash
+    if (typeof window !== "undefined" && window.location.hash) {
+      setShowLogo(true);
+    }
+  }, []);
 
   return (
     <>
@@ -74,15 +88,19 @@ const Nav: React.FC = () => {
             {isDropdownOpen && (
               <div className={styles.dropdownMenu} id="aboutDropdown">
                 {[
-                  { label: "Our Mission", href: "#our-mission" },
-                  { label: "Engineering", href: "#engineering" },
-                  { label: "Exploration", href: "#exploration" },
-                  { label: "Terraforming", href: "#terraforming" },
+                  { label: "Our Mission", href: "/#our-mission" },
+                  { label: "Engineering", href: "/#engineering" },
+                  { label: "Exploration", href: "/#exploration" },
+                  { label: "Terraforming", href: "/#terraforming" },
                 ].map(({ label, href }) => (
                   <a
                     key={href}
                     href={href}
-                    onClick={() => setIsDropdownOpen(false)}
+                    onClick={() => {
+                      setIsDropdownOpen(false);
+                      setShowLogo(true);
+                      setScrollUp(true);
+                    }}
                   >
                     {label}
                   </a>
@@ -90,7 +108,7 @@ const Nav: React.FC = () => {
               </div>
             )}
           </div>
-          <a href="#technology">technology</a>
+          <a href="/#technology">technology</a>
         </div>
 
         <Link
@@ -101,8 +119,8 @@ const Nav: React.FC = () => {
         </Link>
 
         <div className={styles.right}>
-          <a href="#news">news</a>
-          <a href="#contact">contact</a>
+          <a href="/news">news</a>
+          <a href="/#contact">contact</a>
         </div>
 
         <button

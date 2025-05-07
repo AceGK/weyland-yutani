@@ -1,26 +1,25 @@
 html {
-    --text: hsl(0, 0%, 20%);
-    --text2: hsl(0, 0%, 85%);
-    // --accent1: #FFD304; 
-    // --accent1: #D7A200;
-    --accent1: #EBBF06; // warm gold
-    --accent2: rgba(255, 255, 255, .8);
-    --accent3: #74ACBF;
-    --gradient1: linear-gradient(
-        to right,
-        #daa947,   /* warm gold */
-        #b88f60,   /* muted bronze */
-        #4cb393,   /* desaturated teal */
-        #2f9e93    /* deeper teal */
-      );
-    --bkg1: hsl(0, 0%, 10%);
-    --overlay: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  --text: hsl(0, 0%, 20%);
+  --text2: hsl(0, 0%, 85%);
+  // --accent1: #FFD304;
+  // --accent1: #D7A200;
+  --accent1: #ebbf06; // warm gold
+  --accent2: rgba(255, 255, 255, 0.8);
+  --accent3: #74acbf;
+  --gradient1: linear-gradient(
+    to right,
+    #daa947,
+    /* warm gold */ #b88f60,
+    /* muted bronze */ #4cb393,
+    /* desaturated teal */ #2f9e93 /* deeper teal */
+  );
+  --gradient-bg: linear-gradient(to bottom right, rgb(22, 22, 27), #07080b);
+  --bkg1: hsl(0, 0%, 10%);
+  --overlay: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 
+  --ff-title: "Microgramma-bold";
+  --ff-subtitle: "Microgramma";
+  --ff-text: "Source";
 
-    --ff-title: 'Microgramma-bold';
-    --ff-subtitle:'Microgramma';
-    --ff-text:'Source';
-
-
-    --data-position:calc(3vw + 15px);
+  --data-position: calc(3vw + 15px);
 }

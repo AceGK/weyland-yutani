@@ -10,25 +10,25 @@ const tabs = [
     title: "Neural Integration",
     description:
       "MU/TH/UR-class cores enable instant command over remote ops, with predictive AI and zero-latency mission control.",
-    image: "/photos/12.jpeg",
+    image: "/images/12.jpeg",
   },
   {
     title: "FTL Transit Systems",
     description:
       "W-Y FTL-class vessels utilize faster-than-light propulsion to bridge interstellar distances in a fraction of the time, enabling reliable deployment to even the most remote sectors.",
-    image: "/photos/17.jpg",
+    image: "/images/17.jpg",
   },
   {
     title: "Hypersleep Cryostasis",
     description:
       "Advanced cryo-pods preserve biological integrity during long missions by placing crew and cargo in suspended animation, minimizing aging and resource consumption.",
-    image: "/photos/9.jpg",
+    image: "/images/9.jpg",
   },
   {
     title: "Fusion Reactors",
     description:
       "Our next-gen fusion cores use triple-stage plasma cyclers and cryo-magnetic containment. Deployed in atmospheric processors, interstellar vessels, and colonial outposts, W-Y fusion drives guarantee energy independence.",
-    image: "/photos/5.jpeg",
+    image: "/images/5.jpeg",
   },
 ];
 

@@ -16,14 +16,14 @@ interface SectionProps {
 }
 
 export default function Home() {
-  useScrollHash([
-    "about",
-    "engineering",
-    "exploration",
-    "terraforming",
-    "technology",
-    "contact",
-  ]);
+  // useScrollHash([
+  //   "our-mission",
+  //   "engineering",
+  //   "exploration",
+  //   "terraforming",
+  //   "technology",
+  //   "contact",
+  // ]);
 
   return (
     <>

@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       <button
         className={styles.scrollIndicator}
         onClick={() => {
-          const nextSection = document.getElementById("about");
+          const nextSection = document.getElementById("our-mission");
           if (nextSection) {
             nextSection.scrollIntoView({ behavior: "smooth" });
           }

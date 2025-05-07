@@ -13,7 +13,7 @@ import { useRef } from "react";
 const slides = [
   {
     title: "Our Mission",
-    image: "/photos/3.jpeg",
+    image: "/images/3.jpeg",
     content: (
       <>
         <p>
@@ -33,7 +33,7 @@ const slides = [
   },
   {
     title: "Engineering",
-    image: "/photos/2.jpeg",
+    image: "/images/2.jpeg",
     content: (
       <>
         <p>
@@ -58,7 +58,7 @@ const slides = [
   },
   {
     title: "Exploration",
-    image: "/photos/6.jpeg",
+    image: "/images/6.jpeg",
     content: (
       <>
         <p>
@@ -87,7 +87,7 @@ const slides = [
   },
   {
     title: "Terraforming",
-    image: "/photos/8.jpeg",
+    image: "/images/8.jpeg",
     content: (
       <>
         <p>
