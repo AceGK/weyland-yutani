@@ -1,3 +1,4 @@
+// app/news/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import posts from "@/lib/newsPosts.json";
 import Page from "@/components/post/Page";
@@ -12,38 +13,43 @@ interface Post {
   image: string;
 }
 
-export async function generateMetadata(
-  { params }: { params: { slug: string } }
-): Promise<Metadata> {
-  const post = posts.find((p) => p.slug === params.slug);
-  if (!post) return {};
+// export async function generateMetadata(
+//   { params }: { params: Promise<{ slug: string }> }
+// ): Promise<Metadata> {
+//   const { slug } = await params; // 
 
-  return {
-    title: post.title,
-    description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      url: `https://weyland-yutani.vercel.app/news/${post.slug}`,
-      images: [{ url: post.image || "/og-thumbnail.jpg" }],
-    },
-    twitter: {
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image || "/og-thumbnail.jpg"],
-    },
-  };
-}
+//   const post = posts.find((p) => p.slug === slug);
+//   if (!post) return {};
+
+//   return {
+//     title: post.title,
+//     description: post.excerpt,
+//     openGraph: {
+//       title: post.title,
+//       description: post.excerpt,
+//       url: `https://weyland-yutani.vercel.app/news/${slug}`,
+//       images: [{ url: post.image || "/og-thumbnail.jpg" }],
+//     },
+//     twitter: {
+//       title: post.title,
+//       description: post.excerpt,
+//       images: [post.image || "/og-thumbnail.jpg"],
+//     },
+//   };
+// }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return posts.map((p) => ({ slug: p.slug }));
 }
 
-export default async function NewsPostPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function NewsPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
 
   const post = posts.find((p: Post) => p.slug === slug);
-
   if (!post) return notFound();
 
   return (
