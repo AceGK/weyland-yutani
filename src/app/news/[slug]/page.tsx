@@ -11,21 +11,23 @@ interface Post {
   image: string;
 }
 
-export async function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  return posts.map((p) => ({ slug: p.slug }));
 }
 
-export default function NewsPostPage({ params }: { params: { slug: string } }) {
-  const post = posts.find((p: Post) => p.slug === params.slug);
+export default async function NewsPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  const post = posts.find((p: Post) => p.slug === slug);
 
   if (!post) return notFound();
 
   return (
-    <Page 
+    <Page
       title={post.title}
       date={post.date}
       content={post.content}
-      image={post.image} 
-      />
+      image={post.image}
+    />
   );
 }
