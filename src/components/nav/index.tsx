@@ -142,16 +142,16 @@ const Nav: React.FC = () => {
             ✕
           </button>
           <nav className={styles.modalMenu}>
-            <a href="#our-mission" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#our-mission" onClick={() => setIsMenuOpen(false)}>
               Mission
             </a>
-            <a href="#technology" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#technology" onClick={() => setIsMenuOpen(false)}>
               Technology
             </a>
-            <a href="#news" onClick={() => setIsMenuOpen(false)}>
+            <a href="/news" onClick={() => setIsMenuOpen(false)}>
               News
             </a>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#contact" onClick={() => setIsMenuOpen(false)}>
               Contact
             </a>
           </nav>
