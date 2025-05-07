@@ -124,8 +124,8 @@ const Nav: React.FC = () => {
             ✕
           </button>
           <nav className={styles.modalMenu}>
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>
-              About
+            <a href="#our-mission" onClick={() => setIsMenuOpen(false)}>
+              Mission
             </a>
             <a href="#technology" onClick={() => setIsMenuOpen(false)}>
               Technology
